@@ -19,7 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <ProjectReference Include="/easygametest/easygametest.csproj" />
+    <ProjectReference Include="../easygameapp/easygameapp.csproj" />
   </ItemGroup>
 
 </Project>
