@@ -1,0 +1,1081 @@
+oBDS 
+|  @Schema_Version=required(xs:string 3.0.0 3.0.1 3.0.2 3.0.3 3.0.4)
+| Absender  (Absender_Typ
+		)
+| |  @Absender_ID=required(xs:string <=50)
+| |  @Software_ID=required(datatypeCtrimmed <=255)
+| |  @Software_Version=required(datatypeCtrimmed <=255)
+| |  @Installations_ID=optional(datatypeCtrimmed <=255)
+| | Bezeichnung 0(datatypeBtrimmed <=255)
+| | Ansprechpartner 0(datatypeAtrimmed <=255)
+| | Anschrift 0(datatypeBtrimmed <=255)
+| | Telefon 0(datatypeBtrimmed <=255)
+| | EMail 0(datatypeBtrimmed <=255)
+| Meldedatum (Zulaessiger_Datumsbereich_Typ)
+| Menge_Patient 
+| | Patient 1..unbounded
+| | |  @Patient_ID=required(xs:string <=50)
+| | | Patienten_Stammdaten  (Patienten_Stammdaten_Melder_Typ
+		)
+| | | | xs:choice (3 Optionen)
+| | | | Option 1
+| | | | Versichertendaten_GKV  (Versichertendaten_GKV_Typ
+		)
+| | | | | IKNR (Ziffern9_Typ 10\d{7})
+| | | | | GKV_Versichertennummer (xs:string [A-Z]\d{9})
+| | | | Option 2
+| | | | Versichertendaten_PKV  (Versichertendaten_PKV_Typ
+		)
+| | | | | IKNR (xs:string 16\d{7}|950\d{6})
+| | | | | PKV_Versichertennummer 0(datatypeCtrimmed <=255)
+| | | | | Beihilfetraeger 0(datatypeCtrimmed <=255)
+| | | | Option 3
+| | | | Versichertendaten_Sonstige  (Versichertendaten_Sonstige_Typ
+		)
+| | | | | xs:choice (2 Optionen)
+| | | | | Option 1
+| | | | | Ersatzkode (xs:string 970000011 970001001 970100001 970000022 970000099)
+| | | | | Option 2
+| | | | | IKNR 0(xs:string \d{9})
+| | | | | KrankenkassenName 0(datatypeCtrimmed <=255)
+| | | | | Versichertennummer 0(datatypeCtrimmed <=255)
+| | | | Nachname (datatypeAtrimmed <=255)
+| | | | Titel 0(datatypeAtrimmed <=255)
+| | | | Namenszusatz 0(datatypeAtrimmed <=255)
+| | | | Namensvorsatz 0(datatypeAtrimmed <=255)
+| | | | Vornamen (datatypeAtrimmed <=255)
+| | | | Geburtsname 0(datatypeAtrimmed <=255)
+| | | | Menge_Frueherer_Name 0
+| | | | | Frueherer_Name 1..unbounded(datatypeAtrimmed <=255)
+| | | | Geschlecht (xs:string M W D X U)
+| | | | Geburtsdatum  (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | Adresse  (Patienten_Adresse_Melder_Typ
+		)
+| | | | | restriction: Patienten_Adresse_Typ
+| | | | | Strasse 0(datatypeBtrimmed <=255)
+| | | | | Hausnummer 0(datatypeBtrimmed <=255)
+| | | | | Land 0(xs:string [A-Z]{2})
+| | | | | PLZ 0(datatypeBtrimmed <=10)
+| | | | | Ort 0(datatypeBtrimmed <=255)
+| | | Menge_Meldung 
+| | | | Meldung 1..unbounded
+| | | | |  @Meldung_ID=required(xs:string <=50)
+| | | | |  @Melder_ID=required(xs:string <=50)
+| | | | | Meldebegruendung (xs:string I A D W V)
+| | | | | Einwilligung_nicht_meldepflichtig 0(xs:string J N)
+| | | | | Zertifizierung 0(xs:string 1 2 3)
+| | | | | Eigene_Leistung (xs:string J N U)
+| | | | | Tumorzuordnung  (Tumorzuordnung_Typ
+		)
+| | | | | |  @Tumor_ID=required(xs:string <=50)
+| | | | | | Primaertumor_ICD  (Tumor_ICD_Typ
+		)
+| | | | | | | Code (ICD_Code_Typ [CD]\d\d(\.\d(\d)?)?|M72.4)
+| | | | | | | Version (xs:string (10 20\d{2} ((GM)|(WHO))|Sonstige))
+| | | | | | Diagnosedatum  (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | Seitenlokalisation 0(xs:string L R B M U T)
+| | | | | | Morphologie_ICD_O 0 (Morphologie_ICD_O_Typ
+		)
+| | | | | | | Code (xs:string \d\d\d\d/\d)
+| | | | | | | Version (xs:string 31 32 33 bb)
+| | | | | xs:choice (8 Optionen)
+| | | | | Option 1
+| | | | | Diagnose  (Diagnose_Typ
+		)
+| | | | | | Primaertumor_Diagnosetext 0(datatypeC <=1000)
+| | | | | | Primaertumor_Topographie_ICD_O 0 (Topographie_ICD_O_Typ
+		)
+| | | | | | | Code (xs:string C\d\d\.\d(\d)?)
+| | | | | | | Version (xs:string 31 32 33)
+| | | | | | Primaertumor_Topographie_Freitext 0(datatypeCtrimmed <=255)
+| | | | | | Diagnosesicherung (xs:string 1 2 4 5 6 7 7.1 7.2 7.3 8 9)
+| | | | | | Menge_Fruehere_Tumorerkrankung 0
+| | | | | | | Fruehere_Tumorerkrankung 1..unbounded
+| | | | | | | | Freitext 0(datatypeCtrimmed <=255)
+| | | | | | | | ICD 0 (Tumor_ICD_Typ
+		)
+| | | | | | | | | Code (ICD_Code_Typ [CD]\d\d(\.\d(\d)?)?|M72.4)
+| | | | | | | | | Version (xs:string (10 20\d{2} ((GM)|(WHO))|Sonstige))
+| | | | | | | | Diagnosedatum 0(xs:gYear)
+| | | | | | Histologie 0 (Histologie_Typ
+		)
+| | | | | | |  @Histologie_ID=optional(xs:string <=50)
+| | | | | | | Tumor_Histologiedatum 0 (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | Histologie_EinsendeNr 0(datatypeCtrimmed <=255)
+| | | | | | | Morphologie_ICD_O 0..5 (Morphologie_ICD_O_Typ
+		)
+| | | | | | | | Code (xs:string \d\d\d\d/\d)
+| | | | | | | | Version (xs:string 31 32 33 bb)
+| | | | | | | Morphologie_Freitext 0(datatypeCtrimmed <=255)
+| | | | | | | Grading (xs:string 0 1 2 3 4 X L M H B U T)
+| | | | | | | LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | Menge_FM 0 (Menge_FM_Typ
+		)
+| | | | | | | Fernmetastase 1..unbounded
+| | | | | | | | Diagnosedatum  (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | | Lokalisation (xs:string PUL OSS HEP BRA LYM MAR PLE PER ADR SKI OTH GEN)
+| | | | | | cTNM 0 (TNM_Typ
+		)
+| | | | | | |  @ID=optional(xs:string <=50)
+| | | | | | | Datum 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | Version 0(xs:string 6 7 8 9)
+| | | | | | | y_Symbol 0(xs:string y)
+| | | | | | | r_Symbol 0(xs:string r)
+| | | | | | | a_Symbol 0(xs:string a)
+| | | | | | | c_p_u_Praefix_T 0(xs:string c p u)
+| | | | | | | T 0(Freitext30_Typ (is.*)|([a01234X].*))
+| | | | | | | m_Symbol 0(xs:string [m](,is){0,1}|(is)|[2-9](,is){0,1}|[1-9][0-9]{1,2}(,is){0,1})
+| | | | | | | c_p_u_Praefix_N 0(xs:string c p u)
+| | | | | | | N 0(Freitext30_Typ [0123X].*)
+| | | | | | | c_p_u_Praefix_M 0(xs:string c p u)
+| | | | | | | M 0(Freitext30_Typ [01X].*)
+| | | | | | | L 0(xs:string LX L0 L1)
+| | | | | | | V 0(xs:string VX V0 V1 V2)
+| | | | | | | Pn 0(xs:string PnX Pn0 Pn1)
+| | | | | | | S 0(xs:string SX S0 S1 S2 S3)
+| | | | | | | UICC_Stadium 0(xs:string okk 0 0a 0is I IA IA1 IA2 IA3 IB IB1 IB2 IC II IIA IIA1 IIA2 IIB IIC III IIIA IIIA1 IIIA2 IIIB IIIC IIIC1 IIIC2 IIID IS IV IVA IVA1 IVA2 IVB IVC)
+| | | | | | pTNM 0 (TNM_Typ
+		)
+| | | | | | |  @ID=optional(xs:string <=50)
+| | | | | | | Datum 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | Version 0(xs:string 6 7 8 9)
+| | | | | | | y_Symbol 0(xs:string y)
+| | | | | | | r_Symbol 0(xs:string r)
+| | | | | | | a_Symbol 0(xs:string a)
+| | | | | | | c_p_u_Praefix_T 0(xs:string c p u)
+| | | | | | | T 0(Freitext30_Typ (is.*)|([a01234X].*))
+| | | | | | | m_Symbol 0(xs:string [m](,is){0,1}|(is)|[2-9](,is){0,1}|[1-9][0-9]{1,2}(,is){0,1})
+| | | | | | | c_p_u_Praefix_N 0(xs:string c p u)
+| | | | | | | N 0(Freitext30_Typ [0123X].*)
+| | | | | | | c_p_u_Praefix_M 0(xs:string c p u)
+| | | | | | | M 0(Freitext30_Typ [01X].*)
+| | | | | | | L 0(xs:string LX L0 L1)
+| | | | | | | V 0(xs:string VX V0 V1 V2)
+| | | | | | | Pn 0(xs:string PnX Pn0 Pn1)
+| | | | | | | S 0(xs:string SX S0 S1 S2 S3)
+| | | | | | | UICC_Stadium 0(xs:string okk 0 0a 0is I IA IA1 IA2 IA3 IB IB1 IB2 IC II IIA IIA1 IIA2 IIB IIC III IIIA IIIA1 IIIA2 IIIB IIIC IIIC1 IIIC2 IIID IS IV IVA IVA1 IVA2 IVB IVC)
+| | | | | | Menge_Weitere_Klassifikation 0 (Menge_Weitere_Klassifikation_Typ
+		)
+| | | | | | | Weitere_Klassifikation 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Name (datatypeCtrimmed <=255)
+| | | | | | | | Stadium (datatypeCtrimmed <=30)
+| | | | | | Menge_Genetik 0 (Menge_Genetik_Typ
+		)
+| | | | | | | Genetische_Variante 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Bezeichnung (datatypeCtrimmed <=255)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Auspraegung (xs:string M W P N U)
+| | | | | | | | Option 2
+| | | | | | | | Sonstige_Auspraegung (datatypeCtrimmed <=255)
+| | | | | | Allgemeiner_Leistungszustand (xs:string 0 1 2 3 4 U 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%)
+| | | | | | Modul_Allgemein 0 (Modul_Allgemein_Typ
+		)
+| | | | | | | Sozialdienstkontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Psychoonkologiekontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Studienteilnahme 0 (Datum_NU_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | NU (xs:string N U)
+| | | | | | Modul_Mamma 0 (Modul_Mamma_Typ
+		)
+| | | | | | | Praetherapeutischer_Menopausenstatus 0(xs:string 1 3 U)
+| | | | | | | HormonrezeptorStatus_Oestrogen 0(xs:string P N U)
+| | | | | | | HormonrezeptorStatus_Progesteron 0(xs:string P N U)
+| | | | | | | Her2neuStatus 0(xs:string P N U)
+| | | | | | | PraeopDrahtmarkierung 0(xs:string M S T N U)
+| | | | | | | IntraopPraeparatkontrolle 0(xs:string M S N U)
+| | | | | | | TumorgroesseInvasiv 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | TumorgroesseDCIS 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | Modul_Darm 0 (Modul_Darm_Typ
+		)
+| | | | | | | RektumAbstandAnokutanlinie 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandAboralerResektionsrand 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandCircResektionsebene 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumQualitaetTME 0(xs:string 1 2 3 P L A U)
+| | | | | | | RektumMRTDuennschichtAngabemesorektaleFaszie 0(xs:string 0|[1-9](\d)?|[DNU])
+| | | | | | | ArtEingriff 0(xs:string E N U)
+| | | | | | | RektumAnzeichnungStomaposition 0(xs:string D N K S U)
+| | | | | | | GradRektumAnastomoseninsuffizienz 0(xs:string B C K U)
+| | | | | | | ASA 0(xs:string 1 2 3 4 5)
+| | | | | | | RASMutation 0(xs:string W M U N)
+| | | | | | Modul_Prostata 0 (Modul_Prostata_Typ
+		)
+| | | | | | | GleasonScore 0 (GleasonScore_Typ
+		)
+| | | | | | | | GradPrimaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | GradSekundaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | ScoreErgebnis 0(xs:string 2 3 4 5 6 7 7a 7b 8 9 10)
+| | | | | | | AnlassGleasonScore 0(xs:string O S U)
+| | | | | | | DatumStanzen 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | AnzahlStanzen 0(xs:nonNegativeInteger)
+| | | | | | | AnzahlPosStanzen 0(xs:nonNegativeInteger)
+| | | | | | | CaBefallStanze 0 (CaBefallStanze_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Prozentzahl (xs:positiveInteger)
+| | | | | | | | Option 2
+| | | | | | | | U (xs:string U)
+| | | | | | | PSA 0(xs:decimal)
+| | | | | | | DatumPSA 0 (Datum_Tag_oder_Monat_genau_Typ_Schaetz_optional
+		)
+| | | | | | | |  @Datumsgenauigkeit=optional(xs:string E T)
+| | | | | | | KomplPostOP_ClavienDindo 0(xs:string J N U)
+| | | | | | Modul_Malignes_Melanom 0 (Modul_Malignes_Melanom_Typ
+		)
+| | | | | | | Sicherheitsabstand_Primaertumor 0(xs:integer)
+| | | | | | | Tumordicke 0(xs:decimal)
+| | | | | | | LDH 0(xs:integer)
+| | | | | | | Ulzeration 0(xs:string J N U)
+| | | | | | Modul_DKKR 0 (Modul_DKKR_Typ
+		)
+| | | | | | | Meldung_EW_DKKR 0(xs:string 1 2 3 5 6 7)
+| | | | | | | Meldung_Austausch 0(xs:string 1 2 9)
+| | | | | | | GPOH_Therapiestudienpatient 0
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | unbekannt_nein (xs:string 0 2)
+| | | | | | | | Option 2
+| | | | | | | | Menge_GPOH_Therapiestudien 
+| | | | | | | | | Therapiestudie 1..unbounded
+| | | | | | | | | | GPOH_Therapiestudienname (datatypeE <=255)
+| | | | | | | | | | GPOH_Therapiestudiennummer 0(datatypeCtrimmed <=255)
+| | | | | | | Menge_Syndrome 0
+| | | | | | | | Syndrom_oder_sonstiges 1..unbounded(datatypeE <=255)
+| | | | | Option 2
+| | | | | Pathologie  (Pathologie_Typ
+		)
+| | | | | |  @Befund_ID=optional(xs:string <=50)
+| | | | | | Primaertumor_Diagnosetext 0(datatypeC <=1000)
+| | | | | | Primaertumor_Topographie_ICD_O 0 (Topographie_ICD_O_Typ
+		)
+| | | | | | | Code (xs:string C\d\d\.\d(\d)?)
+| | | | | | | Version (xs:string 31 32 33)
+| | | | | | Primaertumor_Topographie_Freitext 0(datatypeCtrimmed <=255)
+| | | | | | Diagnosesicherung (xs:string 4 5 6 7 7.1 7.2 7.3 8 9)
+| | | | | | Histologie 0 (Histologie_Typ
+		)
+| | | | | | |  @Histologie_ID=optional(xs:string <=50)
+| | | | | | | Tumor_Histologiedatum 0 (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | Histologie_EinsendeNr 0(datatypeCtrimmed <=255)
+| | | | | | | Morphologie_ICD_O 0..5 (Morphologie_ICD_O_Typ
+		)
+| | | | | | | | Code (xs:string \d\d\d\d/\d)
+| | | | | | | | Version (xs:string 31 32 33 bb)
+| | | | | | | Morphologie_Freitext 0(datatypeCtrimmed <=255)
+| | | | | | | Grading (xs:string 0 1 2 3 4 X L M H B U T)
+| | | | | | | LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | Menge_FM 0 (Menge_FM_Typ
+		)
+| | | | | | | Fernmetastase 1..unbounded
+| | | | | | | | Diagnosedatum  (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | | Lokalisation (xs:string PUL OSS HEP BRA LYM MAR PLE PER ADR SKI OTH GEN)
+| | | | | | cTNM 0 (TNM_Typ
+		)
+| | | | | | |  @ID=optional(xs:string <=50)
+| | | | | | | Datum 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | Version 0(xs:string 6 7 8 9)
+| | | | | | | y_Symbol 0(xs:string y)
+| | | | | | | r_Symbol 0(xs:string r)
+| | | | | | | a_Symbol 0(xs:string a)
+| | | | | | | c_p_u_Praefix_T 0(xs:string c p u)
+| | | | | | | T 0(Freitext30_Typ (is.*)|([a01234X].*))
+| | | | | | | m_Symbol 0(xs:string [m](,is){0,1}|(is)|[2-9](,is){0,1}|[1-9][0-9]{1,2}(,is){0,1})
+| | | | | | | c_p_u_Praefix_N 0(xs:string c p u)
+| | | | | | | N 0(Freitext30_Typ [0123X].*)
+| | | | | | | c_p_u_Praefix_M 0(xs:string c p u)
+| | | | | | | M 0(Freitext30_Typ [01X].*)
+| | | | | | | L 0(xs:string LX L0 L1)
+| | | | | | | V 0(xs:string VX V0 V1 V2)
+| | | | | | | Pn 0(xs:string PnX Pn0 Pn1)
+| | | | | | | S 0(xs:string SX S0 S1 S2 S3)
+| | | | | | | UICC_Stadium 0(xs:string okk 0 0a 0is I IA IA1 IA2 IA3 IB IB1 IB2 IC II IIA IIA1 IIA2 IIB IIC III IIIA IIIA1 IIIA2 IIIB IIIC IIIC1 IIIC2 IIID IS IV IVA IVA1 IVA2 IVB IVC)
+| | | | | | pTNM 0 (TNM_Typ
+		)
+| | | | | | |  @ID=optional(xs:string <=50)
+| | | | | | | Datum 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | Version 0(xs:string 6 7 8 9)
+| | | | | | | y_Symbol 0(xs:string y)
+| | | | | | | r_Symbol 0(xs:string r)
+| | | | | | | a_Symbol 0(xs:string a)
+| | | | | | | c_p_u_Praefix_T 0(xs:string c p u)
+| | | | | | | T 0(Freitext30_Typ (is.*)|([a01234X].*))
+| | | | | | | m_Symbol 0(xs:string [m](,is){0,1}|(is)|[2-9](,is){0,1}|[1-9][0-9]{1,2}(,is){0,1})
+| | | | | | | c_p_u_Praefix_N 0(xs:string c p u)
+| | | | | | | N 0(Freitext30_Typ [0123X].*)
+| | | | | | | c_p_u_Praefix_M 0(xs:string c p u)
+| | | | | | | M 0(Freitext30_Typ [01X].*)
+| | | | | | | L 0(xs:string LX L0 L1)
+| | | | | | | V 0(xs:string VX V0 V1 V2)
+| | | | | | | Pn 0(xs:string PnX Pn0 Pn1)
+| | | | | | | S 0(xs:string SX S0 S1 S2 S3)
+| | | | | | | UICC_Stadium 0(xs:string okk 0 0a 0is I IA IA1 IA2 IA3 IB IB1 IB2 IC II IIA IIA1 IIA2 IIB IIC III IIIA IIIA1 IIIA2 IIIB IIIC IIIC1 IIIC2 IIID IS IV IVA IVA1 IVA2 IVB IVC)
+| | | | | | Lokale_Beurteilung_Residualstatus 0(xs:string R0 R1 R2 R1(is) R1(cy+) RX U)
+| | | | | | Menge_Weitere_Klassifikation 0 (Menge_Weitere_Klassifikation_Typ
+		)
+| | | | | | | Weitere_Klassifikation 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Name (datatypeCtrimmed <=255)
+| | | | | | | | Stadium (datatypeCtrimmed <=30)
+| | | | | | Menge_Genetik 0 (Menge_Genetik_Typ
+		)
+| | | | | | | Genetische_Variante 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Bezeichnung (datatypeCtrimmed <=255)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Auspraegung (xs:string M W P N U)
+| | | | | | | | Option 2
+| | | | | | | | Sonstige_Auspraegung (datatypeCtrimmed <=255)
+| | | | | | Einsender 
+| | | | | | | xs:choice (2 Optionen)
+| | | | | | | Option 1
+| | | | | | | strukturiert 
+| | | | | | | | Titel 0(datatypeAtrimmed <=255)
+| | | | | | | | Vornamen 0(datatypeAtrimmed <=255)
+| | | | | | | | Nachname 0(datatypeAtrimmed <=255)
+| | | | | | | | Einrichtung 0(datatypeBtrimmed <=255)
+| | | | | | | | Abteilung 0(datatypeBtrimmed <=255)
+| | | | | | | | Strasse 0(datatypeBtrimmed <=255)
+| | | | | | | | Hausnummer 0(datatypeBtrimmed <=255)
+| | | | | | | | Land 0(xs:string [A-Z]{2})
+| | | | | | | | PLZ 0(datatypeBtrimmed <=10)
+| | | | | | | | Ort 0(datatypeBtrimmed <=255)
+| | | | | | | Option 2
+| | | | | | | unstrukturiert 
+| | | | | | | | Adresse1 (datatypeBtrimmed <=255)
+| | | | | | | | Adresse2 0(datatypeBtrimmed <=255)
+| | | | | | | | Adresse3 0(datatypeBtrimmed <=255)
+| | | | | | | | Adresse4 0(datatypeBtrimmed <=255)
+| | | | | | | | Adresse5 0(datatypeBtrimmed <=255)
+| | | | | | | | Adresse6 0(datatypeBtrimmed <=255)
+| | | | | | | Ident_Nummern 0 (Ident_Nummern_Typ
+		)
+| | | | | | | | IKNR 0(xs:string \d{9})
+| | | | | | | | LANR 0(xs:string \d{9})
+| | | | | | | | BSNR 0(xs:string \d{9})
+| | | | | | | | ZANR 0(xs:string \d{9})
+| | | | | | Befundtext 0(xs:string)
+| | | | | | Modul_Mamma 0 (Modul_Mamma_patho_Typ
+		)
+| | | | | | | restriction: Modul_Mamma_Typ
+| | | | | | | HormonrezeptorStatus_Oestrogen 0(xs:string P N U)
+| | | | | | | HormonrezeptorStatus_Progesteron 0(xs:string P N U)
+| | | | | | | Her2neuStatus 0(xs:string P N U)
+| | | | | | | TumorgroesseInvasiv 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | TumorgroesseDCIS 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | Modul_Darm 0 (Modul_Darm_patho_Typ
+		)
+| | | | | | | restriction: Modul_Darm_Typ
+| | | | | | | RektumAbstandAboralerResektionsrand 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandCircResektionsebene 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumQualitaetTME 0(xs:string 1 2 3 P L A U)
+| | | | | | | RASMutation 0(xs:string W M U N)
+| | | | | | Modul_Prostata 0 (Modul_Prostata_patho_Typ
+		)
+| | | | | | | restriction: Modul_Prostata_Typ
+| | | | | | | GleasonScore 0 (GleasonScore_Typ
+		)
+| | | | | | | | GradPrimaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | GradSekundaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | ScoreErgebnis 0(xs:string 2 3 4 5 6 7 7a 7b 8 9 10)
+| | | | | | | AnlassGleasonScore 0(xs:string O S U)
+| | | | | | | DatumStanzen 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | AnzahlStanzen 0(xs:nonNegativeInteger)
+| | | | | | | AnzahlPosStanzen 0(xs:nonNegativeInteger)
+| | | | | | | CaBefallStanze 0 (CaBefallStanze_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Prozentzahl (xs:positiveInteger)
+| | | | | | | | Option 2
+| | | | | | | | U (xs:string U)
+| | | | | | Modul_Malignes_Melanom 0 (Modul_Malignes_Melanom_patho_Typ
+		)
+| | | | | | | restriction: Modul_Malignes_Melanom_Typ
+| | | | | | | Sicherheitsabstand_Primaertumor 0(xs:integer)
+| | | | | | | Tumordicke 0(xs:decimal)
+| | | | | | | Ulzeration 0(xs:string J N U)
+| | | | | | Modul_DKKR 0 (Modul_DKKR_Typ
+		)
+| | | | | | | Meldung_EW_DKKR 0(xs:string 1 2 3 5 6 7)
+| | | | | | | Meldung_Austausch 0(xs:string 1 2 9)
+| | | | | | | GPOH_Therapiestudienpatient 0
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | unbekannt_nein (xs:string 0 2)
+| | | | | | | | Option 2
+| | | | | | | | Menge_GPOH_Therapiestudien 
+| | | | | | | | | Therapiestudie 1..unbounded
+| | | | | | | | | | GPOH_Therapiestudienname (datatypeE <=255)
+| | | | | | | | | | GPOH_Therapiestudiennummer 0(datatypeCtrimmed <=255)
+| | | | | | | Menge_Syndrome 0
+| | | | | | | | Syndrom_oder_sonstiges 1..unbounded(datatypeE <=255)
+| | | | | Option 3
+| | | | | OP  (OP_Typ
+		)
+| | | | | |  @OP_ID=optional(xs:string <=50)
+| | | | | | Intention (xs:string K P D R S X)
+| | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | Menge_OPS 1
+| | | | | | | OPS 1..unbounded
+| | | | | | | | Code (xs:string <=9 [135689]-\d\d[0-9a-hj-km-z](\.([0-9a-hj-kmnp-z]){1,2}){0,1}([RLB]){0,1})
+| | | | | | | | Version (xs:string 200[4-9]|20[12]\d)
+| | | | | | Histologie 0 (Histologie_Typ
+		)
+| | | | | | |  @Histologie_ID=optional(xs:string <=50)
+| | | | | | | Tumor_Histologiedatum 0 (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | Histologie_EinsendeNr 0(datatypeCtrimmed <=255)
+| | | | | | | Morphologie_ICD_O 0..5 (Morphologie_ICD_O_Typ
+		)
+| | | | | | | | Code (xs:string \d\d\d\d/\d)
+| | | | | | | | Version (xs:string 31 32 33 bb)
+| | | | | | | Morphologie_Freitext 0(datatypeCtrimmed <=255)
+| | | | | | | Grading (xs:string 0 1 2 3 4 X L M H B U T)
+| | | | | | | LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | TNM 0 (TNM_Typ
+		)
+| | | | | | |  @ID=optional(xs:string <=50)
+| | | | | | | Datum 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | Version 0(xs:string 6 7 8 9)
+| | | | | | | y_Symbol 0(xs:string y)
+| | | | | | | r_Symbol 0(xs:string r)
+| | | | | | | a_Symbol 0(xs:string a)
+| | | | | | | c_p_u_Praefix_T 0(xs:string c p u)
+| | | | | | | T 0(Freitext30_Typ (is.*)|([a01234X].*))
+| | | | | | | m_Symbol 0(xs:string [m](,is){0,1}|(is)|[2-9](,is){0,1}|[1-9][0-9]{1,2}(,is){0,1})
+| | | | | | | c_p_u_Praefix_N 0(xs:string c p u)
+| | | | | | | N 0(Freitext30_Typ [0123X].*)
+| | | | | | | c_p_u_Praefix_M 0(xs:string c p u)
+| | | | | | | M 0(Freitext30_Typ [01X].*)
+| | | | | | | L 0(xs:string LX L0 L1)
+| | | | | | | V 0(xs:string VX V0 V1 V2)
+| | | | | | | Pn 0(xs:string PnX Pn0 Pn1)
+| | | | | | | S 0(xs:string SX S0 S1 S2 S3)
+| | | | | | | UICC_Stadium 0(xs:string okk 0 0a 0is I IA IA1 IA2 IA3 IB IB1 IB2 IC II IIA IIA1 IIA2 IIB IIC III IIIA IIIA1 IIIA2 IIIB IIIC IIIC1 IIIC2 IIID IS IV IVA IVA1 IVA2 IVB IVC)
+| | | | | | Residualstatus 0 (Residualstatus_Typ
+		)
+| | | | | | | Lokale_Beurteilung_Residualstatus 0(xs:string R0 R1 R2 R1(is) R1(cy+) RX U)
+| | | | | | | Gesamtbeurteilung_Residualstatus 0(xs:string R0 R1 R2 R1(is) R1(cy+) RX U)
+| | | | | | Menge_Weitere_Klassifikation 0 (Menge_Weitere_Klassifikation_Typ
+		)
+| | | | | | | Weitere_Klassifikation 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Name (datatypeCtrimmed <=255)
+| | | | | | | | Stadium (datatypeCtrimmed <=30)
+| | | | | | Menge_Genetik 0 (Menge_Genetik_Typ
+		)
+| | | | | | | Genetische_Variante 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Bezeichnung (datatypeCtrimmed <=255)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Auspraegung (xs:string M W P N U)
+| | | | | | | | Option 2
+| | | | | | | | Sonstige_Auspraegung (datatypeCtrimmed <=255)
+| | | | | | Komplikationen 
+| | | | | | | xs:choice (2 Optionen)
+| | | | | | | Option 1
+| | | | | | | Komplikation_nein_oder_unbekannt (xs:string N U)
+| | | | | | | Option 2
+| | | | | | | Menge_Komplikation 
+| | | | | | | | Komplikation 1..unbounded (Komplikation_Typ
+		)
+| | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | Option 1
+| | | | | | | | | Kuerzel (xs:string ABD ABS ASF ANI AEP ALR ANS AEE API BIF BOG BOE BSI CHI DAI DPS DIC DEP DLU DSI ENF GER HEM HUR HAE HFI HNK HZI HRS HNA HOP HYB HYF IFV KAS KES KIM KRA KDS LEV LOE LYF LYE MES MIL MED MAT MYI RNB NAB NIN OES OSM PAF PIT PAB PPA PAV PER PLB PEY PLE PMN PNT PDA PAE RPA RIN SKI SES SFH STK TZP TIA TRZ WUH WSS)
+| | | | | | | | | Option 2
+| | | | | | | | | ICD  (Komplikation_ICD_Typ
+		)
+| | | | | | | | | | Code (xs:string [E|G|I|K|M|R|T]\d\d(\.\d(\d)?)?)
+| | | | | | | | | | Version (xs:string (10 20\d{2} ((GM)|(WHO))|Sonstige))
+| | | | | | Menge_Operateur 0
+| | | | | | | Operateur 1..unbounded (Operateur_Typ
+		)
+| | | | | | | | Nachname (datatypeAtrimmed <=255)
+| | | | | | | | Vornamen 0(datatypeAtrimmed <=255)
+| | | | | | | | Hauptoperateur (xs:string J N U)
+| | | | | | Modul_Allgemein 0 (Modul_Allgemein_Typ
+		)
+| | | | | | | Sozialdienstkontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Psychoonkologiekontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Studienteilnahme 0 (Datum_NU_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | NU (xs:string N U)
+| | | | | | Modul_Mamma 0 (Modul_Mamma_Typ
+		)
+| | | | | | | Praetherapeutischer_Menopausenstatus 0(xs:string 1 3 U)
+| | | | | | | HormonrezeptorStatus_Oestrogen 0(xs:string P N U)
+| | | | | | | HormonrezeptorStatus_Progesteron 0(xs:string P N U)
+| | | | | | | Her2neuStatus 0(xs:string P N U)
+| | | | | | | PraeopDrahtmarkierung 0(xs:string M S T N U)
+| | | | | | | IntraopPraeparatkontrolle 0(xs:string M S N U)
+| | | | | | | TumorgroesseInvasiv 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | TumorgroesseDCIS 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | Modul_Darm 0 (Modul_Darm_Typ
+		)
+| | | | | | | RektumAbstandAnokutanlinie 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandAboralerResektionsrand 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandCircResektionsebene 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumQualitaetTME 0(xs:string 1 2 3 P L A U)
+| | | | | | | RektumMRTDuennschichtAngabemesorektaleFaszie 0(xs:string 0|[1-9](\d)?|[DNU])
+| | | | | | | ArtEingriff 0(xs:string E N U)
+| | | | | | | RektumAnzeichnungStomaposition 0(xs:string D N K S U)
+| | | | | | | GradRektumAnastomoseninsuffizienz 0(xs:string B C K U)
+| | | | | | | ASA 0(xs:string 1 2 3 4 5)
+| | | | | | | RASMutation 0(xs:string W M U N)
+| | | | | | Modul_Prostata 0 (Modul_Prostata_Typ
+		)
+| | | | | | | GleasonScore 0 (GleasonScore_Typ
+		)
+| | | | | | | | GradPrimaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | GradSekundaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | ScoreErgebnis 0(xs:string 2 3 4 5 6 7 7a 7b 8 9 10)
+| | | | | | | AnlassGleasonScore 0(xs:string O S U)
+| | | | | | | DatumStanzen 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | AnzahlStanzen 0(xs:nonNegativeInteger)
+| | | | | | | AnzahlPosStanzen 0(xs:nonNegativeInteger)
+| | | | | | | CaBefallStanze 0 (CaBefallStanze_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Prozentzahl (xs:positiveInteger)
+| | | | | | | | Option 2
+| | | | | | | | U (xs:string U)
+| | | | | | | PSA 0(xs:decimal)
+| | | | | | | DatumPSA 0 (Datum_Tag_oder_Monat_genau_Typ_Schaetz_optional
+		)
+| | | | | | | |  @Datumsgenauigkeit=optional(xs:string E T)
+| | | | | | | KomplPostOP_ClavienDindo 0(xs:string J N U)
+| | | | | | Modul_Malignes_Melanom 0 (Modul_Malignes_Melanom_Typ
+		)
+| | | | | | | Sicherheitsabstand_Primaertumor 0(xs:integer)
+| | | | | | | Tumordicke 0(xs:decimal)
+| | | | | | | LDH 0(xs:integer)
+| | | | | | | Ulzeration 0(xs:string J N U)
+| | | | | Option 4
+| | | | | ST  (ST_Typ
+		)
+| | | | | |  @ST_ID=optional(xs:string <=50)
+| | | | | | Meldeanlass (xs:string behandlungsbeginn behandlungsende)
+| | | | | | Intention (xs:string K P O S X)
+| | | | | | Stellung_OP (xs:string O A N I Z S)
+| | | | | | Menge_Bestrahlung 0
+| | | | | | | Bestrahlung 1..unbounded
+| | | | | | | | Beginn 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Ende 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Applikationsart 
+| | | | | | | | | xs:choice (4 Optionen)
+| | | | | | | | | Option 1
+| | | | | | | | | Perkutan 
+| | | | | | | | | | Radiochemo 0(xs:string RCJ RCN)
+| | | | | | | | | | Stereotaktisch 0(xs:string ST)
+| | | | | | | | | | Atemgetriggert 0(xs:string 4D)
+| | | | | | | | | | Zielgebiet  (Zielgebiet_Typ
+		)
+| | | | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | | | Option 1
+| | | | | | | | | | | CodeVersion2021 (xs:string 1.1 1.2 1.3 1.4 1.5 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 2.10 2.11 2.12 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 4.10 4.11 4.12 4.13 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 5.10 5.11 5.12 6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 6.10 6.11 6.12 6.13 6.14 6.15 6.16 6.17 6.18 6.19 7.1 7.2 7.3 7.4 7.5 7.6 7.7 7.8 7.9 8.1 8.2 9.1 9.2 9.3 9.4 9.5 9.6 9.7 9.8 9.9 9.10 9.11 9.12 9.13 9.14 9.15 10.1 10.2 10.3)
+| | | | | | | | | | | Option 2
+| | | | | | | | | | | CodeVersion2014 (xs:string 1. 1.1. 1.2. 1.3. 2. 2.+ 2.- 2.1. 2.1.+ 2.1.- 2.2. 2.2.+ 2.2.- 2.3. 2.3.+ 2.3.- 2.4. 2.4.+ 2.4.- 2.5. 2.5.+ 2.5.- 2.6. 2.6.+ 2.6.- 2.7. 2.7.+ 2.7.- 2.8. 2.8.+ 2.8.- 2.9. 3. 3.+ 3.- 3.1. 3.1.+ 3.1.- 3.2. 3.2.+ 3.2.- 3.3. 3.3.+ 3.3.- 3.4. 3.4.+ 3.4.- 3.5. 3.5.+ 3.5.- 3.6. 3.6.+ 3.6.- 3.7. 4. 4.+ 4.- 4.1. 4.1.+ 4.1.- 4.2. 4.2.+ 4.2.- 4.3. 4.3.+ 4.3.- 4.4. 4.4.+ 4.4.- 4.5. 4.5.+ 4.5.- 4.6. 4.6.+ 4.6.- 4.7. 4.8. 4.8.+ 4.8.- 4.9. 4.9.+ 4.9.- 5. 5.+ 5.- 5.1. 5.1.+ 5.1.- 5.2. 5.2.- 5.2.+ 5.3. 5.3.- 5.3.+ 5.4. 5.4.+ 5.4.- 5.5. 5.5.+ 5.5.- 5.6. 5.6.+ 5.6.- 5.7. 5.7.+ 5.7.2.- 5.7.2.+ 5.7.2. 5.7.1.- 5.7.1.+ 5.7.1. 5.7.- 5.8. 5.8.- 5.8.+ 5.9. 5.9.- 5.9.+ 5.10. 5.10.+ 5.10.- 5.11. 5.11.+ 5.11.- 5.12. 6. 6.1. 6.2. 6.3. 6.4. 6.5. 6.6. 6.7. 6.8. 6.9. 6.10. 6.11. 6.12. 6.13. 6.14. 6.15. 6.16. 7. 7.+ 7.- 7.1. 7.2. 8. 8.1. 8.2.)
+| | | | | | | | | | Seite_Zielgebiet (xs:string L R B M U T)
+| | | | | | | | | | Strahlenart 0(xs:string UH EL NE PN SI RO Co-60 SO)
+| | | | | | | | | | Gesamtdosis 0 (Strahlendosis_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string Gy)
+| | | | | | | | | | Einzeldosis 0 (Strahlendosis_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string Gy)
+| | | | | | | | | | Boost 0(xs:string J SIB SEQ KON N)
+| | | | | | | | | Option 2
+| | | | | | | | | Kontakt 
+| | | | | | | | | | Interstitiell_endokavitaer (xs:string I K)
+| | | | | | | | | | Rate_Type (xs:string HDR LDR PDR)
+| | | | | | | | | | Zielgebiet  (Zielgebiet_Typ
+		)
+| | | | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | | | Option 1
+| | | | | | | | | | | CodeVersion2021 (xs:string 1.1 1.2 1.3 1.4 1.5 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 2.10 2.11 2.12 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 4.10 4.11 4.12 4.13 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 5.10 5.11 5.12 6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 6.10 6.11 6.12 6.13 6.14 6.15 6.16 6.17 6.18 6.19 7.1 7.2 7.3 7.4 7.5 7.6 7.7 7.8 7.9 8.1 8.2 9.1 9.2 9.3 9.4 9.5 9.6 9.7 9.8 9.9 9.10 9.11 9.12 9.13 9.14 9.15 10.1 10.2 10.3)
+| | | | | | | | | | | Option 2
+| | | | | | | | | | | CodeVersion2014 (xs:string 1. 1.1. 1.2. 1.3. 2. 2.+ 2.- 2.1. 2.1.+ 2.1.- 2.2. 2.2.+ 2.2.- 2.3. 2.3.+ 2.3.- 2.4. 2.4.+ 2.4.- 2.5. 2.5.+ 2.5.- 2.6. 2.6.+ 2.6.- 2.7. 2.7.+ 2.7.- 2.8. 2.8.+ 2.8.- 2.9. 3. 3.+ 3.- 3.1. 3.1.+ 3.1.- 3.2. 3.2.+ 3.2.- 3.3. 3.3.+ 3.3.- 3.4. 3.4.+ 3.4.- 3.5. 3.5.+ 3.5.- 3.6. 3.6.+ 3.6.- 3.7. 4. 4.+ 4.- 4.1. 4.1.+ 4.1.- 4.2. 4.2.+ 4.2.- 4.3. 4.3.+ 4.3.- 4.4. 4.4.+ 4.4.- 4.5. 4.5.+ 4.5.- 4.6. 4.6.+ 4.6.- 4.7. 4.8. 4.8.+ 4.8.- 4.9. 4.9.+ 4.9.- 5. 5.+ 5.- 5.1. 5.1.+ 5.1.- 5.2. 5.2.- 5.2.+ 5.3. 5.3.- 5.3.+ 5.4. 5.4.+ 5.4.- 5.5. 5.5.+ 5.5.- 5.6. 5.6.+ 5.6.- 5.7. 5.7.+ 5.7.2.- 5.7.2.+ 5.7.2. 5.7.1.- 5.7.1.+ 5.7.1. 5.7.- 5.8. 5.8.- 5.8.+ 5.9. 5.9.- 5.9.+ 5.10. 5.10.+ 5.10.- 5.11. 5.11.+ 5.11.- 5.12. 6. 6.1. 6.2. 6.3. 6.4. 6.5. 6.6. 6.7. 6.8. 6.9. 6.10. 6.11. 6.12. 6.13. 6.14. 6.15. 6.16. 7. 7.+ 7.- 7.1. 7.2. 8. 8.1. 8.2.)
+| | | | | | | | | | Seite_Zielgebiet (xs:string L R B M U T)
+| | | | | | | | | | Strahlenart 0(Strahlenart_Typ UH EL SO)
+| | | | | | | | | | Gesamtdosis 0 (Strahlendosis_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string Gy)
+| | | | | | | | | | Einzeldosis 0 (Strahlendosis_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string Gy)
+| | | | | | | | | | Boost 0(xs:string J SIB SEQ KON N)
+| | | | | | | | | Option 3
+| | | | | | | | | Metabolisch 
+| | | | | | | | | | Metabolisch_Typ (xs:string SIRT PRRT PSMA RJT RIT M)
+| | | | | | | | | | Zielgebiet 0 (Zielgebiet_Typ
+		)
+| | | | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | | | Option 1
+| | | | | | | | | | | CodeVersion2021 (xs:string 1.1 1.2 1.3 1.4 1.5 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 2.10 2.11 2.12 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 4.10 4.11 4.12 4.13 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 5.10 5.11 5.12 6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 6.10 6.11 6.12 6.13 6.14 6.15 6.16 6.17 6.18 6.19 7.1 7.2 7.3 7.4 7.5 7.6 7.7 7.8 7.9 8.1 8.2 9.1 9.2 9.3 9.4 9.5 9.6 9.7 9.8 9.9 9.10 9.11 9.12 9.13 9.14 9.15 10.1 10.2 10.3)
+| | | | | | | | | | | Option 2
+| | | | | | | | | | | CodeVersion2014 (xs:string 1. 1.1. 1.2. 1.3. 2. 2.+ 2.- 2.1. 2.1.+ 2.1.- 2.2. 2.2.+ 2.2.- 2.3. 2.3.+ 2.3.- 2.4. 2.4.+ 2.4.- 2.5. 2.5.+ 2.5.- 2.6. 2.6.+ 2.6.- 2.7. 2.7.+ 2.7.- 2.8. 2.8.+ 2.8.- 2.9. 3. 3.+ 3.- 3.1. 3.1.+ 3.1.- 3.2. 3.2.+ 3.2.- 3.3. 3.3.+ 3.3.- 3.4. 3.4.+ 3.4.- 3.5. 3.5.+ 3.5.- 3.6. 3.6.+ 3.6.- 3.7. 4. 4.+ 4.- 4.1. 4.1.+ 4.1.- 4.2. 4.2.+ 4.2.- 4.3. 4.3.+ 4.3.- 4.4. 4.4.+ 4.4.- 4.5. 4.5.+ 4.5.- 4.6. 4.6.+ 4.6.- 4.7. 4.8. 4.8.+ 4.8.- 4.9. 4.9.+ 4.9.- 5. 5.+ 5.- 5.1. 5.1.+ 5.1.- 5.2. 5.2.- 5.2.+ 5.3. 5.3.- 5.3.+ 5.4. 5.4.+ 5.4.- 5.5. 5.5.+ 5.5.- 5.6. 5.6.+ 5.6.- 5.7. 5.7.+ 5.7.2.- 5.7.2.+ 5.7.2. 5.7.1.- 5.7.1.+ 5.7.1. 5.7.- 5.8. 5.8.- 5.8.+ 5.9. 5.9.- 5.9.+ 5.10. 5.10.+ 5.10.- 5.11. 5.11.+ 5.11.- 5.12. 6. 6.1. 6.2. 6.3. 6.4. 6.5. 6.6. 6.7. 6.8. 6.9. 6.10. 6.11. 6.12. 6.13. 6.14. 6.15. 6.16. 7. 7.+ 7.- 7.1. 7.2. 8. 8.1. 8.2.)
+| | | | | | | | | | Seite_Zielgebiet 0(xs:string L R B M U T)
+| | | | | | | | | | Strahlenart 0(xs:string Lu-177 J-131 Y-90 Ra-223 Ac-225 Sm-153 Tb-161 Sr-89 Ir-192 SONU)
+| | | | | | | | | | Gesamtdosis 0 (Aktivitaets_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string GBq MBq kBq)
+| | | | | | | | | | Einzeldosis 0 (Aktivitaets_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string GBq MBq kBq)
+| | | | | | | | | Option 4
+| | | | | | | | | Sonstige 
+| | | | | | | | | | Zielgebiet 0 (Zielgebiet_Typ
+		)
+| | | | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | | | Option 1
+| | | | | | | | | | | CodeVersion2021 (xs:string 1.1 1.2 1.3 1.4 1.5 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 2.10 2.11 2.12 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 4.9 4.10 4.11 4.12 4.13 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 5.10 5.11 5.12 6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 6.9 6.10 6.11 6.12 6.13 6.14 6.15 6.16 6.17 6.18 6.19 7.1 7.2 7.3 7.4 7.5 7.6 7.7 7.8 7.9 8.1 8.2 9.1 9.2 9.3 9.4 9.5 9.6 9.7 9.8 9.9 9.10 9.11 9.12 9.13 9.14 9.15 10.1 10.2 10.3)
+| | | | | | | | | | | Option 2
+| | | | | | | | | | | CodeVersion2014 (xs:string 1. 1.1. 1.2. 1.3. 2. 2.+ 2.- 2.1. 2.1.+ 2.1.- 2.2. 2.2.+ 2.2.- 2.3. 2.3.+ 2.3.- 2.4. 2.4.+ 2.4.- 2.5. 2.5.+ 2.5.- 2.6. 2.6.+ 2.6.- 2.7. 2.7.+ 2.7.- 2.8. 2.8.+ 2.8.- 2.9. 3. 3.+ 3.- 3.1. 3.1.+ 3.1.- 3.2. 3.2.+ 3.2.- 3.3. 3.3.+ 3.3.- 3.4. 3.4.+ 3.4.- 3.5. 3.5.+ 3.5.- 3.6. 3.6.+ 3.6.- 3.7. 4. 4.+ 4.- 4.1. 4.1.+ 4.1.- 4.2. 4.2.+ 4.2.- 4.3. 4.3.+ 4.3.- 4.4. 4.4.+ 4.4.- 4.5. 4.5.+ 4.5.- 4.6. 4.6.+ 4.6.- 4.7. 4.8. 4.8.+ 4.8.- 4.9. 4.9.+ 4.9.- 5. 5.+ 5.- 5.1. 5.1.+ 5.1.- 5.2. 5.2.- 5.2.+ 5.3. 5.3.- 5.3.+ 5.4. 5.4.+ 5.4.- 5.5. 5.5.+ 5.5.- 5.6. 5.6.+ 5.6.- 5.7. 5.7.+ 5.7.2.- 5.7.2.+ 5.7.2. 5.7.1.- 5.7.1.+ 5.7.1. 5.7.- 5.8. 5.8.- 5.8.+ 5.9. 5.9.- 5.9.+ 5.10. 5.10.+ 5.10.- 5.11. 5.11.+ 5.11.- 5.12. 6. 6.1. 6.2. 6.3. 6.4. 6.5. 6.6. 6.7. 6.8. 6.9. 6.10. 6.11. 6.12. 6.13. 6.14. 6.15. 6.16. 7. 7.+ 7.- 7.1. 7.2. 8. 8.1. 8.2.)
+| | | | | | | | | | Seite_Zielgebiet 0(xs:string L R B M U T)
+| | | | | | | | | | Gesamtdosis 0 (Strahlendosis_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string Gy)
+| | | | | | | | | | Einzeldosis 0 (Strahlendosis_Typ
+		)
+| | | | | | | | | | | Dosis (xs:decimal)
+| | | | | | | | | | | Einheit (xs:string Gy)
+| | | | | | Ende_Grund 0(xs:string E F A P S V T U)
+| | | | | | Nebenwirkungen  (Nebenwirkung_Typ
+		)
+| | | | | | | xs:choice (2 Optionen)
+| | | | | | | Option 1
+| | | | | | | Grad_maximal2_oder_unbekannt (xs:string K 1 2 U)
+| | | | | | | Option 2
+| | | | | | | Menge_Nebenwirkung 
+| | | | | | | | Nebenwirkung 1..unbounded
+| | | | | | | | | Art 
+| | | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | | Option 1
+| | | | | | | | | | Bezeichnung (datatypeBtrimmed <=255)
+| | | | | | | | | | Option 2
+| | | | | | | | | | MedDRA_Code (xs:string \d{8})
+| | | | | | | | | Grad (xs:string 3 4 5)
+| | | | | | | | | Version (xs:string 4 4.03 5.0 Sonstige)
+| | | | | | Modul_Allgemein 0 (Modul_Allgemein_Typ
+		)
+| | | | | | | Sozialdienstkontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Psychoonkologiekontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Studienteilnahme 0 (Datum_NU_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | NU (xs:string N U)
+| | | | | Option 5
+| | | | | SYST  (SYST_Typ
+		)
+| | | | | |  @SYST_ID=optional(xs:string <=50)
+| | | | | | Meldeanlass (xs:string behandlungsbeginn behandlungsende)
+| | | | | | Intention (xs:string K P S X)
+| | | | | | Stellung_OP (xs:string O A N I S)
+| | | | | | Therapieart (xs:string CH HO IM ZS CI CZ CIZ IZ SZ AS WS WW SO)
+| | | | | | Protokoll 0(datatypeE <=255)
+| | | | | | Beginn  (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | Menge_Substanz 0
+| | | | | | | Substanz 1..unbounded
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Bezeichnung (datatypeE <=255)
+| | | | | | | | Option 2
+| | | | | | | | ATC 
+| | | | | | | | | Code (xs:string [A-Z]\d\d[A-Z][A-Z]\d\d)
+| | | | | | | | | Version (xs:string 200[4-9]|20[12]\d)
+| | | | | | Ende_Grund 0(xs:string E R W A P S V T U)
+| | | | | | Ende 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | Nebenwirkungen  (Nebenwirkung_Typ
+		)
+| | | | | | | xs:choice (2 Optionen)
+| | | | | | | Option 1
+| | | | | | | Grad_maximal2_oder_unbekannt (xs:string K 1 2 U)
+| | | | | | | Option 2
+| | | | | | | Menge_Nebenwirkung 
+| | | | | | | | Nebenwirkung 1..unbounded
+| | | | | | | | | Art 
+| | | | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | | | Option 1
+| | | | | | | | | | Bezeichnung (datatypeBtrimmed <=255)
+| | | | | | | | | | Option 2
+| | | | | | | | | | MedDRA_Code (xs:string \d{8})
+| | | | | | | | | Grad (xs:string 3 4 5)
+| | | | | | | | | Version (xs:string 4 4.03 5.0 Sonstige)
+| | | | | | Modul_Allgemein 0 (Modul_Allgemein_Typ
+		)
+| | | | | | | Sozialdienstkontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Psychoonkologiekontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Studienteilnahme 0 (Datum_NU_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | NU (xs:string N U)
+| | | | | Option 6
+| | | | | Verlauf  (Verlauf_Typ
+		)
+| | | | | |  @Verlauf_ID=optional(xs:string <=50)
+| | | | | | Meldeanlass (xs:string statusaenderung statusmeldung)
+| | | | | | Untersuchungsdatum_Verlauf (Zulaessiger_Datumsbereich_Typ)
+| | | | | | Gesamtbeurteilung_Tumorstatus (xs:string V T K P D B R Y U X)
+| | | | | | Verlauf_Lokaler_Tumorstatus 0(xs:string K T P N R F U X)
+| | | | | | Verlauf_Tumorstatus_Lymphknoten 0(xs:string K T P N R F U X)
+| | | | | | Verlauf_Tumorstatus_Fernmetastasen 0(xs:string K T P N R F U X)
+| | | | | | Menge_FM 0 (Menge_FM_Typ
+		)
+| | | | | | | Fernmetastase 1..unbounded
+| | | | | | | | Diagnosedatum  (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | | Lokalisation (xs:string PUL OSS HEP BRA LYM MAR PLE PER ADR SKI OTH GEN)
+| | | | | | Histologie 0 (Histologie_Typ
+		)
+| | | | | | |  @Histologie_ID=optional(xs:string <=50)
+| | | | | | | Tumor_Histologiedatum 0 (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | Histologie_EinsendeNr 0(datatypeCtrimmed <=255)
+| | | | | | | Morphologie_ICD_O 0..5 (Morphologie_ICD_O_Typ
+		)
+| | | | | | | | Code (xs:string \d\d\d\d/\d)
+| | | | | | | | Version (xs:string 31 32 33 bb)
+| | | | | | | Morphologie_Freitext 0(datatypeCtrimmed <=255)
+| | | | | | | Grading (xs:string 0 1 2 3 4 X L M H B U T)
+| | | | | | | LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_untersucht 0 (xs:nonNegativeInteger
+		)
+| | | | | | | Sentinel_LK_befallen 0 (xs:nonNegativeInteger
+		)
+| | | | | | TNM 0 (TNM_Typ
+		)
+| | | | | | |  @ID=optional(xs:string <=50)
+| | | | | | | Datum 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | Version 0(xs:string 6 7 8 9)
+| | | | | | | y_Symbol 0(xs:string y)
+| | | | | | | r_Symbol 0(xs:string r)
+| | | | | | | a_Symbol 0(xs:string a)
+| | | | | | | c_p_u_Praefix_T 0(xs:string c p u)
+| | | | | | | T 0(Freitext30_Typ (is.*)|([a01234X].*))
+| | | | | | | m_Symbol 0(xs:string [m](,is){0,1}|(is)|[2-9](,is){0,1}|[1-9][0-9]{1,2}(,is){0,1})
+| | | | | | | c_p_u_Praefix_N 0(xs:string c p u)
+| | | | | | | N 0(Freitext30_Typ [0123X].*)
+| | | | | | | c_p_u_Praefix_M 0(xs:string c p u)
+| | | | | | | M 0(Freitext30_Typ [01X].*)
+| | | | | | | L 0(xs:string LX L0 L1)
+| | | | | | | V 0(xs:string VX V0 V1 V2)
+| | | | | | | Pn 0(xs:string PnX Pn0 Pn1)
+| | | | | | | S 0(xs:string SX S0 S1 S2 S3)
+| | | | | | | UICC_Stadium 0(xs:string okk 0 0a 0is I IA IA1 IA2 IA3 IB IB1 IB2 IC II IIA IIA1 IIA2 IIB IIC III IIIA IIIA1 IIIA2 IIIB IIIC IIIC1 IIIC2 IIID IS IV IVA IVA1 IVA2 IVB IVC)
+| | | | | | Menge_Weitere_Klassifikation 0 (Menge_Weitere_Klassifikation_Typ
+		)
+| | | | | | | Weitere_Klassifikation 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Name (datatypeCtrimmed <=255)
+| | | | | | | | Stadium (datatypeCtrimmed <=30)
+| | | | | | Menge_Genetik 0 (Menge_Genetik_Typ
+		)
+| | | | | | | Genetische_Variante 1..unbounded
+| | | | | | | | Datum 0 (Datum_Tag_oder_Monat_genau_Typ
+		)
+| | | | | | | | |  @Datumsgenauigkeit=required(xs:string E T)
+| | | | | | | | Bezeichnung (datatypeCtrimmed <=255)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Auspraegung (xs:string M W P N U)
+| | | | | | | | Option 2
+| | | | | | | | Sonstige_Auspraegung (datatypeCtrimmed <=255)
+| | | | | | Allgemeiner_Leistungszustand (xs:string 0 1 2 3 4 U 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%)
+| | | | | | Modul_Allgemein 0 (Modul_Allgemein_Typ
+		)
+| | | | | | | Sozialdienstkontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Psychoonkologiekontakt 0 (Datum_N_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | N  (xs:string
+		)
+| | | | | | | Studienteilnahme 0 (Datum_NU_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Datum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | | | Option 2
+| | | | | | | | NU (xs:string N U)
+| | | | | | Modul_Mamma 0 (Modul_Mamma_Typ
+		)
+| | | | | | | Praetherapeutischer_Menopausenstatus 0(xs:string 1 3 U)
+| | | | | | | HormonrezeptorStatus_Oestrogen 0(xs:string P N U)
+| | | | | | | HormonrezeptorStatus_Progesteron 0(xs:string P N U)
+| | | | | | | Her2neuStatus 0(xs:string P N U)
+| | | | | | | PraeopDrahtmarkierung 0(xs:string M S T N U)
+| | | | | | | IntraopPraeparatkontrolle 0(xs:string M S N U)
+| | | | | | | TumorgroesseInvasiv 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | TumorgroesseDCIS 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | Modul_Darm 0 (Modul_Darm_Typ
+		)
+| | | | | | | RektumAbstandAnokutanlinie 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandAboralerResektionsrand 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumAbstandCircResektionsebene 0(xs:string \d(\d)?(\d)?|U)
+| | | | | | | RektumQualitaetTME 0(xs:string 1 2 3 P L A U)
+| | | | | | | RektumMRTDuennschichtAngabemesorektaleFaszie 0(xs:string 0|[1-9](\d)?|[DNU])
+| | | | | | | ArtEingriff 0(xs:string E N U)
+| | | | | | | RektumAnzeichnungStomaposition 0(xs:string D N K S U)
+| | | | | | | GradRektumAnastomoseninsuffizienz 0(xs:string B C K U)
+| | | | | | | ASA 0(xs:string 1 2 3 4 5)
+| | | | | | | RASMutation 0(xs:string W M U N)
+| | | | | | Modul_Prostata 0 (Modul_Prostata_Typ
+		)
+| | | | | | | GleasonScore 0 (GleasonScore_Typ
+		)
+| | | | | | | | GradPrimaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | GradSekundaer 0(xs:string 1 2 3 4 5)
+| | | | | | | | ScoreErgebnis 0(xs:string 2 3 4 5 6 7 7a 7b 8 9 10)
+| | | | | | | AnlassGleasonScore 0(xs:string O S U)
+| | | | | | | DatumStanzen 0(Zulaessiger_Datumsbereich_Typ)
+| | | | | | | AnzahlStanzen 0(xs:nonNegativeInteger)
+| | | | | | | AnzahlPosStanzen 0(xs:nonNegativeInteger)
+| | | | | | | CaBefallStanze 0 (CaBefallStanze_Typ
+		)
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | Prozentzahl (xs:positiveInteger)
+| | | | | | | | Option 2
+| | | | | | | | U (xs:string U)
+| | | | | | | PSA 0(xs:decimal)
+| | | | | | | DatumPSA 0 (Datum_Tag_oder_Monat_genau_Typ_Schaetz_optional
+		)
+| | | | | | | |  @Datumsgenauigkeit=optional(xs:string E T)
+| | | | | | | KomplPostOP_ClavienDindo 0(xs:string J N U)
+| | | | | | Modul_Malignes_Melanom 0 (Modul_Malignes_Melanom_Typ
+		)
+| | | | | | | Sicherheitsabstand_Primaertumor 0(xs:integer)
+| | | | | | | Tumordicke 0(xs:decimal)
+| | | | | | | LDH 0(xs:integer)
+| | | | | | | Ulzeration 0(xs:string J N U)
+| | | | | | Modul_DKKR 0 (Modul_DKKR_Typ
+		)
+| | | | | | | Meldung_EW_DKKR 0(xs:string 1 2 3 5 6 7)
+| | | | | | | Meldung_Austausch 0(xs:string 1 2 9)
+| | | | | | | GPOH_Therapiestudienpatient 0
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | unbekannt_nein (xs:string 0 2)
+| | | | | | | | Option 2
+| | | | | | | | Menge_GPOH_Therapiestudien 
+| | | | | | | | | Therapiestudie 1..unbounded
+| | | | | | | | | | GPOH_Therapiestudienname (datatypeE <=255)
+| | | | | | | | | | GPOH_Therapiestudiennummer 0(datatypeCtrimmed <=255)
+| | | | | | | Menge_Syndrome 0
+| | | | | | | | Syndrom_oder_sonstiges 1..unbounded(datatypeE <=255)
+| | | | | Option 7
+| | | | | Tod  (Tod_Typ
+		)
+| | | | | |  @Abschluss_ID=optional(xs:string <=50)
+| | | | | | Sterbedatum (Zulaessiger_Datumsbereich_Typ)
+| | | | | | Tod_tumorbedingt (xs:string J N U)
+| | | | | | Menge_Todesursachen 0
+| | | | | | | Todesursache_ICD 1..unbounded (Allgemein_ICD_Typ
+		)
+| | | | | | | | Code (xs:string [A-Z]\d\d(\.\d(\d)?)?)
+| | | | | | | | Version (xs:string (10 20\d{2} ((GM)|(WHO))|Sonstige))
+| | | | | | Modul_DKKR 0 (Modul_DKKR_Typ
+		)
+| | | | | | | Meldung_EW_DKKR 0(xs:string 1 2 3 5 6 7)
+| | | | | | | Meldung_Austausch 0(xs:string 1 2 9)
+| | | | | | | GPOH_Therapiestudienpatient 0
+| | | | | | | | xs:choice (2 Optionen)
+| | | | | | | | Option 1
+| | | | | | | | unbekannt_nein (xs:string 0 2)
+| | | | | | | | Option 2
+| | | | | | | | Menge_GPOH_Therapiestudien 
+| | | | | | | | | Therapiestudie 1..unbounded
+| | | | | | | | | | GPOH_Therapiestudienname (datatypeE <=255)
+| | | | | | | | | | GPOH_Therapiestudiennummer 0(datatypeCtrimmed <=255)
+| | | | | | | Menge_Syndrome 0
+| | | | | | | | Syndrom_oder_sonstiges 1..unbounded(datatypeE <=255)
+| | | | | Option 8
+| | | | | Tumorkonferenz  (Tumorkonferenz_Typ
+		)
+| | | | | |  @Tumorkonferenz_ID=optional(xs:string <=50)
+| | | | | | Meldeanlass (xs:string diagnose behandlungsbeginn behandlungsende statusaenderung)
+| | | | | | Datum  (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | Typ (xs:string praeth postop postth ther)
+| | | | | | Therapieempfehlung 0
+| | | | | | | Menge_Typ_Therapieempfehlung 
+| | | | | | | | Typ_Therapieempfehlung 1..unbounded(xs:string CH HO IM ZS SZ CI CZ CIZ IZ WW AS WS OP ST SO KW)
+| | | | | | | Abweichung_Patientenwunsch (xs:string J N U)
+| | | | | Menge_Zusatzitem 0 (Menge_Zusatzitem_Typ
+		)
+| | | | | | Zusatzitem 1..unbounded
+| | | | | | | Datum 0 (Datum_Tag_oder_Monat_oder_Jahr_oder_nicht_genau_Typ
+		)
+| | | | | | | |  @Datumsgenauigkeit=required(xs:string E T M V)
+| | | | | | | Art (datatypeCtrimmed <=255)
+| | | | | | | Wert 0(datatypeCtrimmed <=255)
+| | | | | | | Bemerkung 0(xs:string <=2000)
+| | | | | Anmerkung 0(xs:string <=2000)
+| | | Anmerkung 0(xs:string <=2000)
+| Menge_Melder 
+| | Melder 1..unbounded (Melder_Typ
+		)
+| | |  @ID=required(xs:string <=50)
+| | | Ident_Nummern 0 (Ident_Nummern_Typ
+		)
+| | | | IKNR 0(xs:string \d{9})
+| | | | LANR 0(xs:string \d{9})
+| | | | BSNR 0(xs:string \d{9})
+| | | | ZANR 0(xs:string \d{9})
+| | | KH_Abt_Station_Praxis 0(datatypeBtrimmed <=255)
+| | | Arztname 0(datatypeAtrimmed <=255)
+| | | Anschrift 0(datatypeBtrimmed <=255)
+| | | PLZ 0(xs:string \d{5})
+| | | Ort 0(datatypeBtrimmed <=255)
+| | | Bankname 0(datatypeBtrimmed <=255)
+| | | Kontoinhaber 0(datatypeAtrimmed <=255)
+| | | BIC 0(xs:string <=11)
+| | | IBAN 0(xs:string <=34)
