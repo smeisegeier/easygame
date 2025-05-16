@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.basisdatensatz.de/oBDS/XML" xmlns:tns="http://www.basisdatensatz.de/oBDS/XML" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://www.basisdatensatz.de/oBDS/XML" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0.0.8_RKI">
+<!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by MeisegeierS_native (Robert Koch-Institut) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.basisdatensatz.de/oBDS/XML" xmlns:tns="http://www.basisdatensatz.de/oBDS/XML" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://www.basisdatensatz.de/oBDS/XML" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0.0.8a_RKI">
 	<xs:element name="oBDS_RKI">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Lieferregister" type="Lieferregister_Typ"/>
-				<xs:element name="Lieferdatum">
-					<xs:complexType>
-						<xs:complexContent>
-							<xs:extension base="Datum_Tag_genau_Typ"/>
-						</xs:complexContent>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="Lieferdatum" type="Datum_Tag_genau_Typ"/>
 				<xs:element name="Menge_Patient">
 					<xs:complexType>
 						<xs:sequence>
@@ -71,9 +66,9 @@
 			<xs:attribute name="Schema_Version" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="3.0.0.8_RKI">
+						<xs:enumeration value="3.0.0.8a_RKI">
 							<xs:annotation>
-								<xs:documentation>Version vom 13.10.2022 nach Kommentierungsphase</xs:documentation>
+								<xs:documentation>Version vom 15.12.2022 nach kleinen Änderungen</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 					</xs:restriction>
@@ -1256,7 +1251,7 @@ V - vollständig geschätzt</xs:documentation>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="Menge_OPS">
+			<xs:element name="Menge_OPS" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="OPS" maxOccurs="unbounded">
@@ -1365,8 +1360,8 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="Code"/>
-						<xs:element name="Version" minOccurs="0"/>
+						<xs:element name="Code" type="Freitext30_Typ"/>
+						<xs:element name="Version" type="Freitext30_Typ" minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -1654,7 +1649,7 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 																	</xs:restriction>
 																</xs:simpleType>
 															</xs:element>
-															<xs:element name="Zielgebiet" type="Zielgebiet_Typ"/>
+															<xs:element name="Zielgebiet" type="Zielgebiet_Typ" minOccurs="0"/>
 															<xs:element name="Seite_Zielgebiet" type="Seite_Zielgebiet_Typ"/>
 														</xs:sequence>
 													</xs:complexType>
@@ -1699,7 +1694,7 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 																	</xs:restriction>
 																</xs:simpleType>
 															</xs:element>
-															<xs:element name="Zielgebiet" type="Zielgebiet_Typ"/>
+															<xs:element name="Zielgebiet" type="Zielgebiet_Typ" minOccurs="0"/>
 															<xs:element name="Seite_Zielgebiet" type="Seite_Zielgebiet_Typ"/>
 														</xs:sequence>
 													</xs:complexType>
@@ -1735,6 +1730,7 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 																				<xs:documentation>Radioimmun-Therapie</xs:documentation>
 																			</xs:annotation>
 																		</xs:enumeration>
+																		<xs:enumeration value="M"/>
 																	</xs:restriction>
 																</xs:simpleType>
 															</xs:element>
@@ -1763,7 +1759,7 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 										</xs:complexType>
 									</xs:element>
 									<xs:element name="Anzahl_Tage_Diagnose_ST" type="Abstand_Ereignisse_Typ" minOccurs="0"/>
-									<xs:element name="Anzahl_Tage_ST_Dauer" type="Abstand_Ereignisse_Typ" minOccurs="0"/>
+									<xs:element name="Anzahl_Tage_Bestrahlung_Dauer" type="Abstand_Ereignisse_Typ" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -1804,7 +1800,7 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="Stellung_OP">
+			<xs:element name="Stellung_OP" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Gibt an, in welchem Bezug zu einer operativen Therapie die systemische Therapie steht</xs:documentation>
 				</xs:annotation>
@@ -1977,6 +1973,7 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 								<xs:documentation>8. Auflage</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
+						<xs:enumeration value="9"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -2457,8 +2454,8 @@ Es ist zu beachten, dass X=unbestimmtes Geschlecht (amtlich: keine Angabe) einer
 			<xs:documentation>Tumordicke in mm.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:decimal">
-			<xs:fractionDigits value="1"/>
-			<xs:minInclusive value="0.1"/>
+			<xs:fractionDigits value="2"/>
+			<xs:minInclusive value="0.01"/>
 			<xs:maxInclusive value="99.0"/>
 		</xs:restriction>
 	</xs:simpleType>
