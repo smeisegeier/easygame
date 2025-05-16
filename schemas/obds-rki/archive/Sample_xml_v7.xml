@@ -1,0 +1,2751 @@
+<?xml version="1.0" encoding="utf-16"?>
+  <oBDS_RKI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Schema_Version="3.0.0-RKI" xsi:schemaLocation="http://www.gekid.de/namespace oBDS_RKI.xsd" xmlns="http://www.gekid.de/namespace">
+    <Lieferregister Register_ID="09" />
+    <Lieferdatum Datumsgenauigkeit="E">2021-07-24</Lieferdatum>
+    <Menge_Patient>
+      <Patient Patient_ID="261993">
+        <Patienten_Stammdaten>
+          <Geschlecht>M</Geschlecht>
+          <Geburtsdatum Datumsgenauigkeit="M">1939-11-21</Geburtsdatum>
+          <Vitalstatus>
+            <Verstorben>
+              <Datum_verstorben Datumsgenauigkeit="T">2012-07-04</Datum_verstorben>
+              <Menge_Weitere_Todesursachen>
+                <Todesursache_ICD>
+                  <Code>M80.3</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+                <Todesursache_ICD>
+                  <Code>M01.2*</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+                <Todesursache_ICD>
+                  <Code>M75.0</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+              </Menge_Weitere_Todesursachen>
+              <Grundleiden>
+                <Code>J20.9</Code>
+                <Version>10 2018 GM</Version>
+              </Grundleiden>
+            </Verstorben>
+          </Vitalstatus>
+        </Patienten_Stammdaten>
+        <Menge_Tumor>
+          <Tumor Tumor_ID="588819">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="M">2017-10-05</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C92</Code>
+                <Version>10 2016 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>C90.3</Code>
+                <Version>33</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>9</Diagnosesicherung>
+              <Seitenlokalisation>U</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_ICD_O>
+                    <Code>8520/1</Code>
+                    <Version>33</Version>
+                  </Morphologie_ICD_O>
+                </Morphologie>
+                <Grading>U</Grading>
+                <LK_untersucht>9</LK_untersucht>
+                <LK_befallen>8</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>SKI</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>BRA</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>HEP</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                <T>is pu</T>
+                <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                <N>1bI</N>
+                <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                <M>1lym</M>
+                <L>LX</L>
+                <V>VX</V>
+                <Pn>Pn1</Pn>
+                <S>S3</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                <T>2b</T>
+                <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                <N>1bIII</N>
+                <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                <M>0(mol-)</M>
+                <L>L0</L>
+                <V>V1</V>
+                <Pn>Pn1</Pn>
+                <S>S0</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>1</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>N</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>N</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>N</Her2neuStatus>
+                <TumorgroesseInvasiv>206</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>119</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>M</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>4</GradPrimaer>
+                  <GradSekundaer>1</GradSekundaer>
+                  <ScoreErgebnis>7</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>92</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>31.4</Tumordicke>
+                <LDH>1018</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>N</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="J">128</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>59590</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="T">2007-05-23</Datum>
+                <Intention>R</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-858.0</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-082.-</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-782.1</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>RX</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">184</Anzahl_Tage_Diagnose_OP>
+              </OP>
+              <OP>
+                <Datum Datumsgenauigkeit="V">2009-04-10</Datum>
+                <Intention>S</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-789.0</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-781.6</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R0</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">321</Anzahl_Tage_Diagnose_OP>
+              </OP>
+              <OP>
+                <Datum Datumsgenauigkeit="V">2012-03-01</Datum>
+                <Intention>P</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-810.x</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-469.k</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R2</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">269</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>K</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2002-02-07</Datum>
+                    <Applikationsart>
+                      <Perkutan>
+                        <Zielgebiet>
+                          <CodeVersion2014>5.7.2.+</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                        <Radiochemo>RCJ</Radiochemo>
+                        <Stereotaktisch>ST</Stereotaktisch>
+                        <Atemgetriggert>4D</Atemgetriggert>
+                      </Perkutan>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">42</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2007-08-18</Datum>
+                <Intention>X</Intention>
+                <Stellung_OP>I</Stellung_OP>
+                <Therapieart>ZS</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>FLO</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XX46</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="U">0</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="J">68</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                  <T>1b</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>3c(sn)</N>
+                  <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                  <M>1c</M>
+                  <L>L1</L>
+                  <V>V1</V>
+                  <Pn>Pn0</Pn>
+                  <S>S0</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>You can never cross the ocean until you have the courage to lose sight of the shore.</Name>
+                    <Stadium>If the wind will not serve, ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>When I let go of what I am, I become what I might be.</Name>
+                    <Stadium>Too many of us are not livi ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Certain things catch your eye, but pursue only those that capture the heart.</Name>
+                    <Stadium>If you look at what you hav ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2001-06-10</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>U</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>F</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>K</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>X</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>PUL</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>OSS</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>is</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>3b</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>x</M>
+                  <L>L1</L>
+                  <V>V1</V>
+                  <Pn>Pn0</Pn>
+                  <S>S0</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Everything you’ve ever wanted is on the other side of fear.</Name>
+                    <Stadium>I have learned over the yea ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Teach thy tongue to say, “I do not know,” and thous shalt progress.</Name>
+                    <Stadium>If you do what you’ve alway ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2012-01-01</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>D</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>N</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>K</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>M</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>ADR</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>SKI</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>BRA</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>3b</T>
+                  <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                  <N>1(sn)</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>1per</M>
+                  <L>LX</L>
+                  <V>V2</V>
+                  <Pn>PnX</Pn>
+                  <S>S3</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us.</Name>
+                    <Stadium>If you can dream it, you ca ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>People often say that motivation doesn’t last. Well, neither does bathing.  That’s why we recommend it daily.</Name>
+                    <Stadium>Ask and it will be given to ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="V">2012-08-15</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>B</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>U</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>N</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>P</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>MAR</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+          <Tumor Tumor_ID="147318">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="T">2012-10-15</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C71</Code>
+                <Version>10 2007 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>C86.4</Code>
+                <Version>31</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>5</Diagnosesicherung>
+              <Seitenlokalisation>L</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_Bluebook>
+                    <Code>Wh ..</Code>
+                    <Version>2</Version>
+                  </Morphologie_Bluebook>
+                </Morphologie>
+                <Grading>T</Grading>
+                <LK_untersucht>3</LK_untersucht>
+                <LK_befallen>6</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>BRA</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>OTH</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>OTH</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                <T>3</T>
+                <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                <N>3b(sn)</N>
+                <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                <M>1bra</M>
+                <L>LX</L>
+                <V>V1</V>
+                <Pn>Pn0</Pn>
+                <S>S0</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                <T>empty</T>
+                <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                <N>1</N>
+                <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                <M>1hep</M>
+                <L>L0</L>
+                <V>V2</V>
+                <Pn>Pn1</Pn>
+                <S>S2</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>U</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>N</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>U</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>P</Her2neuStatus>
+                <TumorgroesseInvasiv>233</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>112</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>M</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>1</GradPrimaer>
+                  <GradSekundaer>4</GradSekundaer>
+                  <ScoreErgebnis>3</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>93</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>42.9</Tumordicke>
+                <LDH>8349</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>J</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="U">0</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>42409</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="M">2001-10-09</Datum>
+                <Intention>D</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>6-002.k</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-906.x</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-670.-</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-906.1</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-839.6</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R1</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">338</Anzahl_Tage_Diagnose_OP>
+              </OP>
+              <OP>
+                <Datum Datumsgenauigkeit="T">2019-01-12</Datum>
+                <Intention>K</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-378.a</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-780.x</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-768.-</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-841.5</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-810.x</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R2</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="U">0</Anzahl_Tage_Diagnose_OP>
+              </OP>
+              <OP>
+                <Datum Datumsgenauigkeit="T">2003-01-13</Datum>
+                <Intention>D</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-795.h</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-244.2</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R1(cy+)</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="U">0</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>I</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2019-12-07</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>3.7</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>T</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">32</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>N</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2017-03-24</Datum>
+                    <Applikationsart>
+                      <Metabolisch>
+                        <Metabolisch_Typ>PRRT</Metabolisch_Typ>
+                        <Zielgebiet>
+                          <CodeVersion2021>7.8</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>M</Seite_Zielgebiet>
+                      </Metabolisch>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2017-11-02</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2014>3.1.</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2011-11-13</Datum>
+                    <Applikationsart>
+                      <Metabolisch>
+                        <Metabolisch_Typ>SIRT</Metabolisch_Typ>
+                        <Zielgebiet>
+                          <CodeVersion2014>5.3.+</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                      </Metabolisch>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">48</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>P</Intention>
+                <Stellung_OP>A</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2005-11-18</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>2.9</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>M</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">214</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">353</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2010-10-26</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2021>2.2</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>M</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>I</Interstitiell_endokavitaer>
+                        <Rate_Type>HDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">324</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2003-11-21</Datum>
+                    <Applikationsart>
+                      <Perkutan>
+                        <Zielgebiet>
+                          <CodeVersion2021>6.19</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                        <Radiochemo>RCJ</Radiochemo>
+                        <Stereotaktisch>ST</Stereotaktisch>
+                        <Atemgetriggert>4D</Atemgetriggert>
+                      </Perkutan>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">99</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">12</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2008-06-11</Datum>
+                <Intention>P</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Therapieart>AS</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>DC (Doce / Cyclo)</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XE19</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XX19</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="U">0</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="M">2003-09-12</Datum>
+                <Intention>K</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Therapieart>HO</Therapieart>
+                <Protokoll>
+                  <Bezeichnung>Certain things catch your e ..</Bezeichnung>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L03AB05</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Whatever you can do, or dre ..</Bezeichnung>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>The battles that count aren ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="J">360</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="J">1</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2009-12-14</Datum>
+                <Intention>K</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Therapieart>WW</Therapieart>
+                <Protokoll>
+                  <Bezeichnung>First, have a definite, cle ..</Bezeichnung>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XD03</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Fall seven times and stand  ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="U">0</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="J">70</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>is (paget)</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>2</N>
+                  <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                  <M>1</M>
+                  <L>L1</L>
+                  <V>V0</V>
+                  <Pn>PnX</Pn>
+                  <S>S2</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>There are no traffic jams along the extra mile.</Name>
+                    <Stadium>Everything has beauty, but  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>In order to succeed, your desire for success should be greater than your fear of failure.</Name>
+                    <Stadium>Believe you can and you’re  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2001-11-28</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>P</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>T</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>F</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>M</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>MAR</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>OSS</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>ADR</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>is (dcis)</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>3b(sn)</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>empty</M>
+                  <L>L1</L>
+                  <V>V0</V>
+                  <Pn>Pn0</Pn>
+                  <S>S0</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Few things can help an individual more than to place responsibility on him, and to let him know that you trust him.</Name>
+                    <Stadium>Ask and it will be given to ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Either you run the day, or the day runs you.</Name>
+                    <Stadium>If the wind will not serve, ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>You can’t fall if you don’t climb.  But there’s no joy in living your whole life on the ground.</Name>
+                    <Stadium>Limitations live only in ou ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2005-07-16</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>D</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>U</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>X</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>N</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>GEN</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>LYM</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>ADR</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>is pu</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>0(mol+)(sn)</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>1lym</M>
+                  <L>L1</L>
+                  <V>V0</V>
+                  <Pn>PnX</Pn>
+                  <S>S3</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Happiness is not something readymade.  It comes from your own actions.</Name>
+                    <Stadium>Fall seven times and stand  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>It does not matter how slowly you go as long as you do not stop.</Name>
+                    <Stadium>You can’t fall if you don’t ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.</Name>
+                    <Stadium>Certain things catch your e ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2018-10-25</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>U</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>R</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>T</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>R</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>MAR</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>PLE</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+          <Tumor Tumor_ID="52429">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="V">2003-05-11</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C92</Code>
+                <Version>10 2012 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>D02.0</Code>
+                <Version>33</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>4</Diagnosesicherung>
+              <Seitenlokalisation>U</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_Bluebook>
+                    <Code>Be ..</Code>
+                    <Version>5</Version>
+                  </Morphologie_Bluebook>
+                </Morphologie>
+                <Grading>2</Grading>
+                <LK_untersucht>10</LK_untersucht>
+                <LK_befallen>10</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>MAR</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>HEP</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>ADR</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                <T>3</T>
+                <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                <N>x</N>
+                <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                <M>1ple</M>
+                <L>LX</L>
+                <V>VX</V>
+                <Pn>PnX</Pn>
+                <S>S0</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                <T>is (lcis)</T>
+                <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                <N>0(mol+)</N>
+                <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                <M>1pul</M>
+                <L>L0</L>
+                <V>V2</V>
+                <Pn>Pn1</Pn>
+                <S>S1</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>3</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>N</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>U</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>U</Her2neuStatus>
+                <TumorgroesseInvasiv>228</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>125</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>W</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>4</GradPrimaer>
+                  <GradSekundaer>1</GradSekundaer>
+                  <ScoreErgebnis>5</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>3</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>59.5</Tumordicke>
+                <LDH>1366</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>N</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="J">50</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>47881</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="V">2001-01-13</Datum>
+                <Intention>P</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-796.n</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-780.1</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-801.g</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-781.1</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>8-916.1</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R0</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="U">0</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2010-09-25</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2014>4.1.-</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2016-09-22</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2014>2.2.-</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>R</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">321</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2017-01-19</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>7.5</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>B</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">156</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>S</Intention>
+                <Stellung_OP>A</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2013-05-07</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2021>7.2</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>K</Interstitiell_endokavitaer>
+                        <Rate_Type>PDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">347</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2005-11-22</Datum>
+                <Intention>P</Intention>
+                <Stellung_OP>I</Stellung_OP>
+                <Therapieart>CZ</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>FAC</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XX42</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L02AA01</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="J">319</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="J">28</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>3a</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>1bII</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>0(i+)</M>
+                  <L>L0</L>
+                  <V>VX</V>
+                  <Pn>Pn0</Pn>
+                  <S>SX</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Fall seven times and stand up eight.</Name>
+                    <Stadium>You can’t fall if you don’t ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>When I let go of what I am, I become what I might be.</Name>
+                    <Stadium>It is not what you do for y ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Certain things catch your eye, but pursue only those that capture the heart.</Name>
+                    <Stadium>Limitations live only in ou ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2015-01-01</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>K</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>R</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>N</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>N</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>HEP</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>LYM</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>4b</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>1a(sn)</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>0</M>
+                  <L>LX</L>
+                  <V>V2</V>
+                  <Pn>Pn1</Pn>
+                  <S>S1</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Limitations live only in our minds.  But if we use our imaginations, our possibilities become limitless.</Name>
+                    <Stadium>If the wind will not serve, ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Certain things catch your eye, but pursue only those that capture the heart.</Name>
+                    <Stadium>It is never too late to be  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Challenges are what make life interesting and overcoming them is what makes life meaningful.</Name>
+                    <Stadium>Believe you can and you’re  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2012-12-15</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>P</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>X</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>K</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>K</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>BRA</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>PUL</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>2a2</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>1a</N>
+                  <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                  <M>0(mol+)</M>
+                  <L>L0</L>
+                  <V>V0</V>
+                  <Pn>PnX</Pn>
+                  <S>SX</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>The battles that count aren’t the ones for gold medals. The struggles within yourself–the invisible battles inside all of us–that’s where it’s at.</Name>
+                    <Stadium>Too many of us are not livi ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Happiness is not something readymade.  It comes from your own actions.</Name>
+                    <Stadium>People often say that motiv ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2014-11-09</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>D</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>K</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>K</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>R</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>OTH</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>OSS</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>PER</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+        </Menge_Tumor>
+      </Patient>
+      <Patient Patient_ID="52958">
+        <Patienten_Stammdaten>
+          <Geschlecht>M</Geschlecht>
+          <Geburtsdatum Datumsgenauigkeit="V">1999-02-27</Geburtsdatum>
+          <Vitalstatus>
+            <Verstorben>
+              <Datum_verstorben Datumsgenauigkeit="M">2007-03-15</Datum_verstorben>
+              <Menge_Weitere_Todesursachen>
+                <Todesursache_ICD>
+                  <Code>C46.-</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+                <Todesursache_ICD>
+                  <Code>P91.4</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+                <Todesursache_ICD>
+                  <Code>M93.2</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+              </Menge_Weitere_Todesursachen>
+              <Grundleiden>
+                <Code>P50.4</Code>
+                <Version>10 2018 GM</Version>
+              </Grundleiden>
+            </Verstorben>
+          </Vitalstatus>
+        </Patienten_Stammdaten>
+        <Menge_Tumor>
+          <Tumor Tumor_ID="184021">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="V">2006-09-06</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C44</Code>
+                <Version>10 2019 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>C86.6</Code>
+                <Version>31</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>7</Diagnosesicherung>
+              <Seitenlokalisation>B</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_ICD_O>
+                    <Code>8522/3</Code>
+                    <Version>32</Version>
+                  </Morphologie_ICD_O>
+                </Morphologie>
+                <Grading>1</Grading>
+                <LK_untersucht>8</LK_untersucht>
+                <LK_befallen>8</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>PLE</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>ADR</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>GEN</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                <T>4b</T>
+                <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                <N>3c(sn)</N>
+                <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                <M>x</M>
+                <L>L1</L>
+                <V>V2</V>
+                <Pn>Pn0</Pn>
+                <S>S2</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                <T>is (dcis)</T>
+                <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                <N>0(mol-)(sn)</N>
+                <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                <M>1</M>
+                <L>LX</L>
+                <V>VX</V>
+                <Pn>Pn0</Pn>
+                <S>SX</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>3</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>U</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>P</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>P</Her2neuStatus>
+                <TumorgroesseInvasiv>237</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>108</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>N</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>3</GradPrimaer>
+                  <GradSekundaer>4</GradSekundaer>
+                  <ScoreErgebnis>8</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>63</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>68.1</Tumordicke>
+                <LDH>9824</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>U</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="U">0</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>75938</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="M">2008-12-18</Datum>
+                <Intention>S</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-801.0</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R0</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">311</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>A</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2007-05-08</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2014>4.9.-</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>T</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>K</Interstitiell_endokavitaer>
+                        <Rate_Type>LDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">199</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">309</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2008-12-17</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>2.8</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>T</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">20</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="T">2015-04-27</Datum>
+                <Intention>X</Intention>
+                <Stellung_OP>N</Stellung_OP>
+                <Therapieart>SO</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>CarboTax</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <Bezeichnung>Challenges are what make li ..</Bezeichnung>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Your time is limited, so do ..</Bezeichnung>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Certain things catch your e ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="J">16</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>x</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>1c(sn)</N>
+                  <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                  <M>1ple</M>
+                  <L>L0</L>
+                  <V>V1</V>
+                  <Pn>PnX</Pn>
+                  <S>S2</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>There are no traffic jams along the extra mile.</Name>
+                    <Stadium>Either you run the day, or  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Certain things catch your eye, but pursue only those that capture the heart.</Name>
+                    <Stadium>Fall seven times and stand  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>The two most important days in your life are the day you are born and the day you find out why.</Name>
+                    <Stadium>When one door of happiness  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="V">2014-05-15</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>P</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>U</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>F</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>T</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>PUL</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>2a1</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>2</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>0(i+)</M>
+                  <L>L0</L>
+                  <V>V0</V>
+                  <Pn>Pn1</Pn>
+                  <S>S3</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Start where you are. Use what you have.  Do what you can.</Name>
+                    <Stadium>If you hear a voice within  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>The only person you are destined to become is the person you decide to be.</Name>
+                    <Stadium>When I stand before God at  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2007-03-27</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>T</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>F</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>F</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>M</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>MAR</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>4b</T>
+                  <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                  <N>0(mol-)</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>0(mol-)</M>
+                  <L>L1</L>
+                  <V>V1</V>
+                  <Pn>Pn1</Pn>
+                  <S>S2</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>You take your life in your own hands, and what happens? A terrible thing, no one to blame.</Name>
+                    <Stadium>Life is not measured by the ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Certain things catch your eye, but pursue only those that capture the heart.</Name>
+                    <Stadium>Certain things catch your e ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2000-02-09</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>R</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>U</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>R</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>U</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>HEP</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+        </Menge_Tumor>
+      </Patient>
+      <Patient Patient_ID="764398">
+        <Patienten_Stammdaten>
+          <Geschlecht>M</Geschlecht>
+          <Geburtsdatum Datumsgenauigkeit="T">1960-05-16</Geburtsdatum>
+          <Vitalstatus>
+            <Verstorben>
+              <Datum_verstorben Datumsgenauigkeit="V">2002-12-22</Datum_verstorben>
+              <Menge_Weitere_Todesursachen>
+                <Todesursache_ICD>
+                  <Code>M25.5</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+                <Todesursache_ICD>
+                  <Code>M02.9</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+                <Todesursache_ICD>
+                  <Code>M14.8*</Code>
+                  <Version>10 2018 GM</Version>
+                </Todesursache_ICD>
+              </Menge_Weitere_Todesursachen>
+              <Grundleiden>
+                <Code>M71.3</Code>
+                <Version>10 2018 GM</Version>
+              </Grundleiden>
+            </Verstorben>
+          </Vitalstatus>
+        </Patienten_Stammdaten>
+        <Menge_Tumor>
+          <Tumor Tumor_ID="912401">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="V">2001-02-16</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C51</Code>
+                <Version>10 2013 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>C74.0</Code>
+                <Version>32</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>4</Diagnosesicherung>
+              <Seitenlokalisation>T</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_Bluebook>
+                    <Code>Tw ..</Code>
+                    <Version>9</Version>
+                  </Morphologie_Bluebook>
+                </Morphologie>
+                <Grading>H</Grading>
+                <LK_untersucht>0</LK_untersucht>
+                <LK_befallen>0</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>LYM</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>PER</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>PUL</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                <T>4d</T>
+                <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                <N>1(sn)</N>
+                <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                <M>1mar</M>
+                <L>L0</L>
+                <V>V2</V>
+                <Pn>Pn0</Pn>
+                <S>S1</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                <T>2c</T>
+                <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                <N>x(sn)</N>
+                <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                <M>1hep</M>
+                <L>L1</L>
+                <V>V0</V>
+                <Pn>PnX</Pn>
+                <S>S3</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>U</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>U</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>P</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>P</Her2neuStatus>
+                <TumorgroesseInvasiv>222</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>124</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>M</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>2</GradPrimaer>
+                  <GradSekundaer>1</GradSekundaer>
+                  <ScoreErgebnis>9</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>99</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>71.9</Tumordicke>
+                <LDH>5831</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>J</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="U">0</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>51045</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="V">2010-09-02</Datum>
+                <Intention>R</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-787.1</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-932.5</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R1</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="U">0</Anzahl_Tage_Diagnose_OP>
+              </OP>
+              <OP>
+                <Datum Datumsgenauigkeit="T">2000-11-19</Datum>
+                <Intention>P</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-840.9</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-78a.c</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-857.2</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-784.4</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-780.0</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R1(is)</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">275</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>S</Intention>
+                <Stellung_OP>N</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2008-10-22</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2014>7.1.</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>R</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>I</Interstitiell_endokavitaer>
+                        <Rate_Type>PDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">46</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2016-02-20</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2014>3.4.</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">364</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">80</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2007-11-13</Datum>
+                    <Applikationsart>
+                      <Perkutan>
+                        <Zielgebiet>
+                          <CodeVersion2014>5.1.+</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>M</Seite_Zielgebiet>
+                        <Radiochemo>RCJ</Radiochemo>
+                        <Stereotaktisch>ST</Stereotaktisch>
+                        <Atemgetriggert>4D</Atemgetriggert>
+                      </Perkutan>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">297</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>N</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2004-10-25</Datum>
+                    <Applikationsart>
+                      <Metabolisch>
+                        <Metabolisch_Typ>RJT</Metabolisch_Typ>
+                        <Zielgebiet>
+                          <CodeVersion2021>3.7</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>R</Seite_Zielgebiet>
+                      </Metabolisch>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">4</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>S</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2011-11-26</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2021>2.4</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>K</Interstitiell_endokavitaer>
+                        <Rate_Type>PDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">82</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2001-05-18</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2014>7.+</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>T</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>I</Interstitiell_endokavitaer>
+                        <Rate_Type>HDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">348</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">144</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2008-08-12</Datum>
+                <Intention>P</Intention>
+                <Stellung_OP>A</Stellung_OP>
+                <Therapieart>ZS</Therapieart>
+                <Protokoll>
+                  <Bezeichnung>Whatever you can do, or dre ..</Bezeichnung>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L02AE04</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Life shrinks or expands in  ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="U">0</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="M">2008-06-16</Datum>
+                <Intention>K</Intention>
+                <Stellung_OP>N</Stellung_OP>
+                <Therapieart>IM</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>FLO</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <Bezeichnung>Go confidently in the direc ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="J">72</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2005-03-05</Datum>
+                <Intention>P</Intention>
+                <Stellung_OP>O</Stellung_OP>
+                <Therapieart>CI</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>EC-P</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <Bezeichnung>Fall seven times and stand  ..</Bezeichnung>
+                  </Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L02BG09</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="U">0</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>1a2</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>1bI</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>1oth</M>
+                  <L>LX</L>
+                  <V>V2</V>
+                  <Pn>Pn0</Pn>
+                  <S>S2</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Ask and it will be given to you; search, and you will find; knock and the door will be opened for you.</Name>
+                    <Stadium>The best revenge is massive ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2006-08-25</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>U</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>F</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>R</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>P</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>ADR</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>1a</T>
+                  <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                  <N>0(sn)</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>0(i+)</M>
+                  <L>L1</L>
+                  <V>V0</V>
+                  <Pn>Pn0</Pn>
+                  <S>S3</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>The only person you are destined to become is the person you decide to be.</Name>
+                    <Stadium>I have been impressed with  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2006-07-20</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>K</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>T</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>T</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>T</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>GEN</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>LYM</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                  <T>is (dcis)</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>3a</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>1ple</M>
+                  <L>LX</L>
+                  <V>V2</V>
+                  <Pn>Pn0</Pn>
+                  <S>SX</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>First, have a definite, clear practical ideal; a goal, an objective. Second, have the necessary means to achieve your ends; wisdom, money, materials, and methods. Third, adjust all your means to that end.</Name>
+                    <Stadium>Limitations live only in ou ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="V">2000-10-24</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>K</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>R</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>N</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>F</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>ADR</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+          <Tumor Tumor_ID="337371">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="M">2012-05-07</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C68</Code>
+                <Version>10 2019 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>C81.1</Code>
+                <Version>33</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>2</Diagnosesicherung>
+              <Seitenlokalisation>U</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_Bluebook>
+                    <Code>Fe ..</Code>
+                    <Version>8</Version>
+                  </Morphologie_Bluebook>
+                </Morphologie>
+                <Grading>0</Grading>
+                <LK_untersucht>2</LK_untersucht>
+                <LK_befallen>9</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>BRA</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>HEP</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>ADR</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                <T>is (paget)</T>
+                <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                <N>1c</N>
+                <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                <M>1</M>
+                <L>L1</L>
+                <V>VX</V>
+                <Pn>Pn1</Pn>
+                <S>S2</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                <T>1a1</T>
+                <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                <N>1b</N>
+                <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                <M>1a</M>
+                <L>L0</L>
+                <V>V2</V>
+                <Pn>Pn1</Pn>
+                <S>SX</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>1</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>N</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>U</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>P</Her2neuStatus>
+                <TumorgroesseInvasiv>214</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>119</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>U</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>2</GradPrimaer>
+                  <GradSekundaer>2</GradSekundaer>
+                  <ScoreErgebnis>5</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>82</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>26.5</Tumordicke>
+                <LDH>6822</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>J</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="U">0</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>16987</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="M">2008-01-03</Datum>
+                <Intention>R</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-79b.x</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R1</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="U">0</Anzahl_Tage_Diagnose_OP>
+              </OP>
+              <OP>
+                <Datum Datumsgenauigkeit="M">2016-12-01</Datum>
+                <Intention>X</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>5-79a.x</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-827.1</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R2</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="U">0</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>K</Intention>
+                <Stellung_OP>A</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2001-04-14</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>4.10</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2009-03-03</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2014>2.5.-</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">271</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">140</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>O</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2007-04-06</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2021>3.8</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>K</Interstitiell_endokavitaer>
+                        <Rate_Type>HDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">78</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="V">2015-03-26</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2014>2.6.+</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>M</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>K</Interstitiell_endokavitaer>
+                        <Rate_Type>HDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">264</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2018-11-14</Datum>
+                    <Applikationsart>
+                      <Kontakt>
+                        <Zielgebiet>
+                          <CodeVersion2014>3.4.</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                        <Interstitiell_endokavitaer>K</Interstitiell_endokavitaer>
+                        <Rate_Type>LDR</Rate_Type>
+                      </Kontakt>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">118</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">60</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="T">2013-08-09</Datum>
+                <Intention>K</Intention>
+                <Stellung_OP>O</Stellung_OP>
+                <Therapieart>CI</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>GemTreo</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <Bezeichnung>You take your life in your  ..</Bezeichnung>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Life is not measured by the ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="J">266</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>is pd</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>0(mol-)(sn)</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>1lym</M>
+                  <L>LX</L>
+                  <V>VX</V>
+                  <Pn>PnX</Pn>
+                  <S>S0</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>The battles that count aren’t the ones for gold medals. The struggles within yourself–the invisible battles inside all of us–that’s where it’s at.</Name>
+                    <Stadium>You become what you believe ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Too many of us are not living our dreams because we are living our fears.</Name>
+                    <Stadium>Ask and it will be given to ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="V">2017-07-26</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>U</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>R</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>X</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>T</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>PUL</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>OSS</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                  <T>is (dcis)</T>
+                  <c_p_u_Praefix_N>p</c_p_u_Praefix_N>
+                  <N>2c</N>
+                  <c_p_u_Praefix_M>u</c_p_u_Praefix_M>
+                  <M>0(mol+)</M>
+                  <L>L1</L>
+                  <V>V2</V>
+                  <Pn>PnX</Pn>
+                  <S>S1</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Fall seven times and stand up eight.</Name>
+                    <Stadium>Fall seven times and stand  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>If you’re offered a seat on a rocket ship, don’t ask what seat! Just get on.</Name>
+                    <Stadium>When one door of happiness  ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Happiness is not something readymade.  It comes from your own actions.</Name>
+                    <Stadium>Either you run the day, or  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2001-10-13</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>X</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>T</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>N</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>R</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>MAR</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>PUL</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>BRA</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>p</c_p_u_Praefix_T>
+                  <T>is (paget)</T>
+                  <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                  <N>1c(sn)</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>1adr</M>
+                  <L>L0</L>
+                  <V>V0</V>
+                  <Pn>PnX</Pn>
+                  <S>S1</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Teach thy tongue to say, “I do not know,” and thous shalt progress.</Name>
+                    <Stadium>Few things can help an indi ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>There are no traffic jams along the extra mile.</Name>
+                    <Stadium>I have been impressed with  ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2002-09-25</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>U</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>T</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>F</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>U</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>SKI</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>ADR</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>OTH</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+          <Tumor Tumor_ID="746173">
+            <Primaerdiagnose>
+              <Diagmosedatum Datumsgenauigkeit="V">2018-05-19</Diagmosedatum>
+              <Primaertumor_ICD>
+                <Code>C91</Code>
+                <Version>10 2011 GM</Version>
+              </Primaertumor_ICD>
+              <Primaertumor_Topographie_ICD_O>
+                <Code>C74.-</Code>
+                <Version>33</Version>
+              </Primaertumor_Topographie_ICD_O>
+              <Diagnosesicherung>4</Diagnosesicherung>
+              <Seitenlokalisation>L</Seitenlokalisation>
+              <Histologie>
+                <Morphologie>
+                  <Morphologie_Bluebook>
+                    <Code>Ev ..</Code>
+                    <Version>1</Version>
+                  </Morphologie_Bluebook>
+                </Morphologie>
+                <Grading>M</Grading>
+                <LK_untersucht>8</LK_untersucht>
+                <LK_befallen>3</LK_befallen>
+              </Histologie>
+              <Menge_FM>
+                <Fernmetastase>
+                  <Lokalisation>LYM</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>OTH</Lokalisation>
+                </Fernmetastase>
+                <Fernmetastase>
+                  <Lokalisation>LYM</Lokalisation>
+                </Fernmetastase>
+              </Menge_FM>
+              <cTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                <T>2a1</T>
+                <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                <N>1mi</N>
+                <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                <M>1a</M>
+                <L>LX</L>
+                <V>VX</V>
+                <Pn>Pn1</Pn>
+                <S>SX</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </cTNM>
+              <pTNM>
+                <Version>7</Version>
+                <y_Symbol>y</y_Symbol>
+                <r_Symbol>r</r_Symbol>
+                <a_Symbol>a</a_Symbol>
+                <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                <T>1mic</T>
+                <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                <N>1a</N>
+                <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                <M>1hep</M>
+                <L>L1</L>
+                <V>V2</V>
+                <Pn>PnX</Pn>
+                <S>S2</S>
+                <UICC_Stadium>okk</UICC_Stadium>
+              </pTNM>
+              <Modul_Mamma>
+                <Praetherapeutischer_Menopausenstatus>U</Praetherapeutischer_Menopausenstatus>
+                <HormonrezeptorStatus_Oestrogen>N</HormonrezeptorStatus_Oestrogen>
+                <HormonrezeptorStatus_Progesteron>P</HormonrezeptorStatus_Progesteron>
+                <Her2neuStatus>U</Her2neuStatus>
+                <TumorgroesseInvasiv>232</TumorgroesseInvasiv>
+                <TumorgroesseDCIS>126</TumorgroesseDCIS>
+              </Modul_Mamma>
+              <Modul_Darm>
+                <RASMutation>W</RASMutation>
+              </Modul_Darm>
+              <Modul_Prostata>
+                <GleasonScore>
+                  <GradPrimaer>2</GradPrimaer>
+                  <GradSekundaer>5</GradSekundaer>
+                  <ScoreErgebnis>4</ScoreErgebnis>
+                </GleasonScore>
+                <PSA>45</PSA>
+              </Modul_Prostata>
+              <Modul_Malignes_Melanom>
+                <Tumordicke>89.7</Tumordicke>
+                <LDH>4754</LDH>
+              </Modul_Malignes_Melanom>
+              <DCN>N</DCN>
+              <Anzahl_Tage_Diagnose_Tod JNU="J">176</Anzahl_Tage_Diagnose_Tod>
+              <Inzidenzort>55888</Inzidenzort>
+            </Primaerdiagnose>
+            <Menge_OP>
+              <OP>
+                <Datum Datumsgenauigkeit="V">2015-05-04</Datum>
+                <Intention>P</Intention>
+                <Menge_OPS>
+                  <OPS>
+                    <Code>1-208.2</Code>
+                  </OPS>
+                  <OPS>
+                    <Code>5-438.2</Code>
+                  </OPS>
+                </Menge_OPS>
+                <Lokale_Beurteilung_Residualstatus>R0</Lokale_Beurteilung_Residualstatus>
+                <Anzahl_Tage_Diagnose_OP JNU="J">343</Anzahl_Tage_Diagnose_OP>
+              </OP>
+            </Menge_OP>
+            <Menge_ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>I</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2009-12-16</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>9.4</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>B</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">165</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">167</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>K</Intention>
+                <Stellung_OP>A</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2005-01-26</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2014>5.1.+</CodeVersion2014>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>R</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">309</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2016-05-12</Datum>
+                    <Applikationsart>
+                      <Perkutan>
+                        <Zielgebiet>
+                          <CodeVersion2021>9.14</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>L</Seite_Zielgebiet>
+                        <Radiochemo>RCJ</Radiochemo>
+                        <Stereotaktisch>ST</Stereotaktisch>
+                        <Atemgetriggert>4D</Atemgetriggert>
+                      </Perkutan>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">271</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+              <ST>
+                <Intention>X</Intention>
+                <Stellung_OP>S</Stellung_OP>
+                <Menge_Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="M">2003-02-19</Datum>
+                    <Applikationsart>
+                      <Perkutan>
+                        <Zielgebiet>
+                          <CodeVersion2021>2.11</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                        <Radiochemo>RCN</Radiochemo>
+                        <Stereotaktisch>ST</Stereotaktisch>
+                        <Atemgetriggert>4D</Atemgetriggert>
+                      </Perkutan>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="J">310</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="J">362</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                  <Bestrahlung>
+                    <Datum Datumsgenauigkeit="T">2005-05-09</Datum>
+                    <Applikationsart>
+                      <Sonstige>
+                        <Zielgebiet>
+                          <CodeVersion2021>4.6</CodeVersion2021>
+                        </Zielgebiet>
+                        <Seite_Zielgebiet>U</Seite_Zielgebiet>
+                      </Sonstige>
+                    </Applikationsart>
+                    <Anzahl_Tage_Diagnose_ST JNU="U">0</Anzahl_Tage_Diagnose_ST>
+                    <Anzahl_Tage_ST_Dauer JNU="U">0</Anzahl_Tage_ST_Dauer>
+                  </Bestrahlung>
+                </Menge_Bestrahlung>
+              </ST>
+            </Menge_ST>
+            <Menge_SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="T">2019-03-12</Datum>
+                <Intention>P</Intention>
+                <Stellung_OP>N</Stellung_OP>
+                <Therapieart>IM</Therapieart>
+                <Protokoll>
+                  <Protokollschluessel>
+                    <Code>GemTreo</Code>
+                    <Version>2008</Version>
+                  </Protokollschluessel>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XX47</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01CP02</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XX35</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="J">313</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+              <SYST>
+                <Datum Datumsgenauigkeit="V">2015-11-11</Datum>
+                <Intention>S</Intention>
+                <Stellung_OP>O</Stellung_OP>
+                <Therapieart>CH</Therapieart>
+                <Protokoll>
+                  <Bezeichnung>Happiness is not something  ..</Bezeichnung>
+                </Protokoll>
+                <Menge_Substanz>
+                  <Substanz>
+                    <ATC>
+                      <Code>L01XE12</Code>
+                      <Version>2019</Version>
+                    </ATC>
+                  </Substanz>
+                  <Substanz>
+                    <Bezeichnung>Whatever the mind of man ca ..</Bezeichnung>
+                  </Substanz>
+                </Menge_Substanz>
+                <Anzahl_Tage_Diagnose_SYST JNU="U">0</Anzahl_Tage_Diagnose_SYST>
+                <Anzahl_Tage_SYST_Dauer JNU="U">0</Anzahl_Tage_SYST_Dauer>
+              </SYST>
+            </Menge_SYST>
+            <Menge_Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>2a</T>
+                  <c_p_u_Praefix_N>c</c_p_u_Praefix_N>
+                  <N>1a</N>
+                  <c_p_u_Praefix_M>c</c_p_u_Praefix_M>
+                  <M>1hep</M>
+                  <L>LX</L>
+                  <V>VX</V>
+                  <Pn>PnX</Pn>
+                  <S>SX</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Go confidently in the direction of your dreams.  Live the life you have imagined.</Name>
+                    <Stadium>You can’t fall if you don’t ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>Too many of us are not living our dreams because we are living our fears.</Name>
+                    <Stadium>Too many of us are not livi ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="V">2012-08-22</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>B</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>T</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>R</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>K</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>OTH</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>LYM</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>u</c_p_u_Praefix_T>
+                  <T>1b2</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>2</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>empty</M>
+                  <L>L0</L>
+                  <V>VX</V>
+                  <Pn>PnX</Pn>
+                  <S>S0</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>You take your life in your own hands, and what happens? A terrible thing, no one to blame.</Name>
+                    <Stadium>When I let go of what I am, ..</Stadium>
+                  </Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>The person who says it cannot be done should not interrupt the person who is doing it.</Name>
+                    <Stadium>I didn’t fail the test. I j ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="T">2016-10-09</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>K</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>P</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>T</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>N</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>PUL</Lokalisation>
+                  </Fernmetastase>
+                  <Fernmetastase>
+                    <Lokalisation>HEP</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+              <Folgeereignis>
+                <TNM>
+                  <Version>7</Version>
+                  <y_Symbol>y</y_Symbol>
+                  <r_Symbol>r</r_Symbol>
+                  <a_Symbol>a</a_Symbol>
+                  <c_p_u_Praefix_T>c</c_p_u_Praefix_T>
+                  <T>3b</T>
+                  <c_p_u_Praefix_N>u</c_p_u_Praefix_N>
+                  <N>0</N>
+                  <c_p_u_Praefix_M>p</c_p_u_Praefix_M>
+                  <M>0(i+)</M>
+                  <L>LX</L>
+                  <V>VX</V>
+                  <Pn>Pn0</Pn>
+                  <S>S3</S>
+                  <UICC_Stadium>okk</UICC_Stadium>
+                </TNM>
+                <Menge_Weitere_Klassifikation>
+                  <Weitere_Klassifikation>
+                    <Name>There is only one way to avoid criticism: do nothing, say nothing, and be nothing.</Name>
+                    <Stadium>If you want your children t ..</Stadium>
+                  </Weitere_Klassifikation>
+                </Menge_Weitere_Klassifikation>
+                <Untersuchungsdatum_Verlauf Datumsgenauigkeit="M">2014-11-24</Untersuchungsdatum_Verlauf>
+                <Gesamtbeurteilung_Tumorstatus>V</Gesamtbeurteilung_Tumorstatus>
+                <Verlauf_Lokaler_Tumorstatus>P</Verlauf_Lokaler_Tumorstatus>
+                <Verlauf_Tumorstatus_Lymphknoten>P</Verlauf_Tumorstatus_Lymphknoten>
+                <Verlauf_Tumorstatus_Fernmetastasen>U</Verlauf_Tumorstatus_Fernmetastasen>
+                <Menge_FM>
+                  <Fernmetastase>
+                    <Lokalisation>HEP</Lokalisation>
+                  </Fernmetastase>
+                </Menge_FM>
+              </Folgeereignis>
+            </Menge_Folgeereignis>
+          </Tumor>
+        </Menge_Tumor>
+      </Patient>
+    </Menge_Patient>
+  </oBDS_RKI>

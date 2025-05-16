@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:ZfKD_Lieferdatensatz xmlns:tns="http://www.gekid.de/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Schema_Version="3.0.0" Schema_Version_Development="3.0.0.6_RKI" xsi:schemaLocation="http://www.gekid.de/namespace ADT_GEKID_v3.0.0.6_RKI.xsd">
+	<tns:Lieferregister Register_ID="02"/>
+	<tns:Lieferdatum Datumsgenauigkeit="E">2022-07-27</tns:Lieferdatum>
+	<tns:Menge_Patient>
+		<tns:Patient Patient_ID="1">
+			<tns:Patienten_Stammdaten>
+				<tns:Geschlecht>M</tns:Geschlecht>
+				<tns:Geburtsdatum Datumsgenauigkeit="T">1929-11-01</tns:Geburtsdatum>
+				<tns:Vitalstatus>
+					<tns:Verstorben>
+						<tns:Datum_verstorben Datumsgenauigkeit="T">2019-05-01</tns:Datum_verstorben>
+						<tns:Grundleiden>
+							<tns:Code>C33.9</tns:Code>
+							<tns:Version>10 2009 GM</tns:Version>							
+						</tns:Grundleiden>
+					</tns:Verstorben>
+				</tns:Vitalstatus>
+			</tns:Patienten_Stammdaten>
+			<tns:Menge_Tumor>
+				<tns:Tumor Tumor_ID="889976">
+					<tns:Primaerdiagnose>
+						<tns:Datum Datumsgenauigkeit="T">2012-09-01</tns:Datum>
+						<tns:Inzidenzort>13054</tns:Inzidenzort>
+						<tns:Primaertumor_ICD>
+							<tns:Code>C25</tns:Code>
+							<tns:Version>10 2005 WHO</tns:Version>
+						</tns:Primaertumor_ICD>
+						<tns:Primaertumor_Topographie_ICD_O>
+							<tns:Code>C25.3</tns:Code>
+							<tns:Version>32</tns:Version>
+						</tns:Primaertumor_Topographie_ICD_O>
+						<tns:Diagnosesicherung>1</tns:Diagnosesicherung>
+						<tns:cTNM>
+							<tns:Version>7</tns:Version>
+							<tns:c_p_u_Praefix_T>u</tns:c_p_u_Praefix_T>
+							<tns:T>1</tns:T>
+							<tns:c_p_u_Praefix_N>p</tns:c_p_u_Praefix_N>
+							<tns:N>0</tns:N>
+							<tns:c_p_u_Praefix_M>c</tns:c_p_u_Praefix_M>
+							<tns:M>0</tns:M>
+							<tns:UICC_Stadium>II</tns:UICC_Stadium>
+						</tns:cTNM>
+						<tns:Histologie>
+							<tns:Morphologie_ICD_O>
+								<tns:Code>8140/3</tns:Code>
+								<tns:Version>33</tns:Version>
+							</tns:Morphologie_ICD_O>
+							<tns:Grading>5</tns:Grading>
+						</tns:Histologie>
+						<tns:Seitenlokalisation>L</tns:Seitenlokalisation>
+						<tns:DCI>N</tns:DCI>
+						<tns:Anzahl_Tage_Diagnose_Tod JNU="N">0</tns:Anzahl_Tage_Diagnose_Tod>
+					</tns:Primaerdiagnose>
+				</tns:Tumor>
+			</tns:Menge_Tumor>
+		</tns:Patient>
+		<tns:Patient Patient_ID="2">
+			<tns:Patienten_Stammdaten>
+				<tns:Geschlecht>X</tns:Geschlecht>
+				<tns:Geburtsdatum Datumsgenauigkeit="V">1900-01-01</tns:Geburtsdatum>
+				<tns:Vitalstatus>
+					<tns:Lebend>
+						<tns:Datum_follow_up Datumsgenauigkeit="E">2021-12-31</tns:Datum_follow_up>
+					</tns:Lebend>
+				</tns:Vitalstatus>
+			</tns:Patienten_Stammdaten>
+			<tns:Menge_Tumor>
+				<tns:Tumor Tumor_ID="368103">
+					<tns:Primaerdiagnose>
+						<tns:Datum Datumsgenauigkeit="V">2000-01-01</tns:Datum>
+						<tns:Inzidenzort>00000</tns:Inzidenzort>
+						<tns:Primaertumor_ICD>
+							<tns:Code>C80</tns:Code>
+						</tns:Primaertumor_ICD>
+						<tns:Seitenlokalisation>U</tns:Seitenlokalisation>
+						<tns:DCI>N</tns:DCI>
+						<tns:Anzahl_Tage_Diagnose_Tod JNU="N">0</tns:Anzahl_Tage_Diagnose_Tod>
+					</tns:Primaerdiagnose>
+				</tns:Tumor>
+			</tns:Menge_Tumor>
+		</tns:Patient>
+	</tns:Menge_Patient>
+</tns:ZfKD_Lieferdatensatz>
