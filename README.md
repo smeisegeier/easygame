@@ -4,4 +4,4 @@ static github pages test
 
 more test
 
-thanks @smeisegeier
+thanks [smeisegeier]([htt](https://github.com/smeisegeier))
