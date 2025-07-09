@@ -36,7 +36,7 @@ oBDS_RKI
 | | | | | | Primaertumor_Topographie_ICD_O 0 (Topographie_ICD_O_Typ)
 | | | | | | | Code (xs:string C\d\d\.\d(\d)?)
 | | | | | | | Version 0(xs:string 31 32 33)
-| | | | | | Diagnosesicherung (xs:string 0 1 2 4 5 6 7 9)
+| | | | | | Diagnosesicherung (xs:string 0 1 2 4 5 6 7 7.1 7.2 7.3 8 9)
 | | | | | | cTNM 0 (TNM_Typ)
 | | | | | | | Version 0(xs:string 6 7 8 9)
 | | | | | | | y_Symbol 0(xs:string y)
@@ -78,6 +78,8 @@ oBDS_RKI
 | | | | | | | Grading (xs:string 0 1 2 3 4 X L M H B U T)
 | | | | | | | LK_untersucht 0 (xs:nonNegativeInteger)
 | | | | | | | LK_befallen 0 (xs:nonNegativeInteger)
+| | | | | | | Sentinel_LK_untersucht 0 (xs:nonNegativeInteger)
+| | | | | | | Sentinel_LK_befallen 0 (xs:nonNegativeInteger)
 | | | | | | Menge_FM 0 (Menge_FM_Typ)
 | | | | | | | Fernmetastase 1..unbounded
 | | | | | | | | Lokalisation (xs:string PUL OSS HEP BRA LYM MAR PLE PER ADR SKI OTH GEN)
