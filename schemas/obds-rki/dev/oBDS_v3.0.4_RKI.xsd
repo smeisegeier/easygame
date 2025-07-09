@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2021 rel. 3 (x64) (http://www.altova.com) by MeisegeierS_native (Robert Koch-Institut) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.basisdatensatz.de/oBDS/XML" xmlns:tns="http://www.basisdatensatz.de/oBDS/XML" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://www.basisdatensatz.de/oBDS/XML" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0.0.8a_RKI">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.basisdatensatz.de/oBDS/XML" xmlns:tns="http://www.basisdatensatz.de/oBDS/XML" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://www.basisdatensatz.de/oBDS/XML" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0.4_RKI">
 	<xs:element name="oBDS_RKI">
 		<xs:complexType>
 			<xs:sequence>
@@ -66,9 +66,9 @@
 			<xs:attribute name="Schema_Version" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="3.0.0.8a_RKI">
+						<xs:enumeration value="3.0.4_RKI">
 							<xs:annotation>
-								<xs:documentation>Version vom 15.12.2022 nach kleinen Änderungen</xs:documentation>
+								<xs:documentation>Version vom 09.07.2025 nach Anpassungen aus oBDS 3.0.4</xs:documentation>
 							</xs:annotation>
 						</xs:enumeration>
 					</xs:restriction>
