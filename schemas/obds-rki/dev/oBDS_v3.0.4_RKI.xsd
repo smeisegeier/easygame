@@ -179,55 +179,70 @@ V - vollständig geschätzt</xs:documentation>
 			</xs:element>
 			<xs:element name="Primaertumor_ICD" type="Tumor_ICD_Typ"/>
 			<xs:element name="Primaertumor_Topographie_ICD_O" type="Topographie_ICD_O_Typ" minOccurs="0"/>
-			<xs:element name="Diagnosesicherung">
-				<xs:annotation>
-					<xs:documentation>Höchste erreichte Diagnosesicherheit zum Diagnosedatum (siehe BfArM, ICD-O-3.2: Ergänzende Informationen, Abschnitt 4.5. "Sicherheit der Diagnose").</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:enumeration value="0">
-							<xs:annotation>
-								<xs:documentation>DCO</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="1">
-							<xs:annotation>
-								<xs:documentation>Klinisch ohne tumorspezifische Diagnostik (nur körperliche Untersuchung)</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="2">
-							<xs:annotation>
-								<xs:documentation>Klinisch: Klinische Diagnose vor dem Sterbedatum durchgeführt; schließt diagnostische Techniken, inklusive Röntgen, Endoskopie, weitere bildgebende Verfahren, Ultraschall, exploratorische Chirurgie (Laparatomie, etc.) und Autopsie, ohne mikroskopische Gewebediagnose, ein.</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="4">
-							<xs:annotation>
-								<xs:documentation>Spezifische Tumormarker</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="5">
-							<xs:annotation>
-								<xs:documentation>Zytologisch: Untersuchung von Zellen aus primären Lokalisationen inklusive Flüssigkeitsaspirationen mittels Endoskopien oder Nadeln. Schließt mikroskopische Untersuchungen von peripheren Blutausstrichen und Ausstrichen von Beckenkammaspirationen ein.</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="6">
-							<xs:annotation>
-								<xs:documentation>Histologie einer Metastase.</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="7">
-							<xs:annotation>
-								<xs:documentation>Histologisch: Histologie des Primärtumors: Histologische Untersuchung von Gewebe des Primärtumors einschließlich aller Schnitttechniken und Knochenmarksbiopsien. Dies schließt Proben des Primärtumors aus Autopsien ein. Histologische Untersuchung des Gewebes aus einer Metastase, einschließlich bei Autopsie.</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-						<xs:enumeration value="9">
-							<xs:annotation>
-								<xs:documentation>Unbekannt</xs:documentation>
-							</xs:annotation>
-						</xs:enumeration>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+		<xs:element name="Diagnosesicherung">
+			<xs:annotation>
+				<xs:documentation>Höchste erreichte Diagnosesicherheit zum Diagnosedatum (siehe BfArM, ICD-O-3.2: Ergänzende Informationen, Abschnitt 4.5. "Sicherheit der Diagnose").</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Klinisch ohne tumorspezifische Diagnostik (nur körperliche Untersuchung)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Klinisch: Klinische Diagnose vor dem Sterbedatum durchgeführt; schließt diagnostische Techniken, inklusive Röntgen, Endoskopie, weitere bildgebende Verfahren, Ultraschall, exploratorische Chirurgie (Laparatomie, etc.) und Autopsie, ohne mikroskopische Gewebediagnose, ein.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Spezifische Tumormarker</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Zytologisch: Untersuchung von Zellen aus primären Lokalisationen inklusive Flüssigkeitsaspirationen mittels Endoskopien oder Nadeln. Schließt mikroskopische Untersuchungen von peripheren Blutausstrichen und Ausstrichen von Beckenkammaspirationen ein.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Histologie Metastase (Ausprägung ist veraltet, besser 7.2 nutzen)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Histologie Primärtumor (Ausprägung ist veraltet, besser 7.1 nutzen)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7.1">
+						<xs:annotation>
+							<xs:documentation>Histologie des Primärtumors: Histologische Untersuchung von Gewebe des Primärtumors</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7.2">
+						<xs:annotation>
+							<xs:documentation>Histologie Metastase: Histologische Untersuchung des Gewebes aus einer Metastase</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7.3">
+						<xs:annotation>
+							<xs:documentation>Histologie der Autopsie: Histologische Untersuchung des Gewebes bei einer Autopsie</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Zytogenetisch und/oder molekularer Test</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Unbekannt</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
 			<xs:element name="cTNM" type="TNM_Typ" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Prätherapeutisches TNM</xs:documentation>
@@ -654,6 +669,8 @@ V - vollständig geschätzt</xs:documentation>
 			</xs:element>
 			<xs:element name="LK_untersucht" type="xs:nonNegativeInteger" minOccurs="0"/>
 			<xs:element name="LK_befallen" type="xs:nonNegativeInteger" minOccurs="0"/>
+			<xs:element name="Sentinel_LK_untersucht" type="xs:nonNegativeInteger" minOccurs="0"/>
+			<xs:element name="Sentinel_LK_befallen" type="xs:nonNegativeInteger" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="Hormonrezeptor_Typ">
