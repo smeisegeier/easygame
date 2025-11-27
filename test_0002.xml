@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="render.xsl"?>
+
+<resource
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://datacite.org/schema/kernel-4"
+    xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+    <identifier identifierType="DOI">10.18444/5.03.01.0005.0021.0002</identifier>
+    <creators>
+        <creator>
+            <creatorName nameType="Organizational">Zentrum für Krebsregisterdaten (ZfKD) im Robert Koch-Institut</creatorName>
+            <nameIdentifier nameIdentifierScheme="Other" schemeURI="">Zentrum für Krebsregisterdaten
+                (ZfKD) im Robert Koch-Institut</nameIdentifier>
+            <affiliation affiliationIdentifier="https://ror.org/01k5qnb77"
+                affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">Robert Koch Institute</affiliation>
+        </creator>
+    </creators>
+    <titles>
+        <title xml:lang="de">Datensatz des ZfKD auf Basis der klinischen Landeskrebsregisterdaten, Stand 2025-11-11, verfügbare Diagnosejahre bis 2023</title>
+        <title titleType="TranslatedTitle" xml:lang="en">Clinical cancer registry dataset from the German Center for Cancer Registry Data, as of 2025-11-11, available years of diagnosis up to 2023</title>
+    </titles>
+    <publisher publisherIdentifier="https://ror.org/01k5qnb77" publisherIdentifierScheme="ROR"
+        schemeURI="https://ror.org">Robert Koch Institute</publisher>
+    <publicationYear>2025</publicationYear>
+    <resourceType resourceTypeGeneral="Dataset">clinical</resourceType>
+    <subjects>
+        <subject subjectScheme="Fields of Science and Technology (FOS)"
+            schemeURI="https://web-archive.oecd.org/2012-06-15/138575-38235147.pdf"
+            classificationCode="3.3">FOS: Health sciences</subject>
+        <subject subjectScheme="Fields of Science and Technology (FOS)"
+            schemeURI="http://www.oecd.org/science/inno/38235147.pdf">FOS: Health sciences</subject>
+    </subjects>
+    <contributors>
+        <contributor contributorType="ContactPerson">
+            <contributorName nameType="Personal">Meisegeier, Stefan</contributorName>
+            <givenName>Stefan</givenName>
+            <familyName>Meisegeier</familyName>
+            <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">
+                https://orcid.org/0000-0003-2347-1836</nameIdentifier>
+            <affiliation affiliationIdentifier="https://ror.org/01k5qnb77"
+                affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">Robert Koch Institute</affiliation>
+        </contributor>
+    </contributors>
+    <dates>
+        <date dateType="Created" dateInformation="">2025-11-11</date>
+        <date dateType="Issued">2025</date>
+    </dates>
+    <language>de</language>
+    <sizes />
+    <formats />
+    <version>2025-11-11</version>
+    <geoLocations>
+        <geoLocation>
+            <geoLocationPlace>Germany</geoLocationPlace>
+        </geoLocation>
+    </geoLocations>
+    <fundingReferences>
+        <fundingReference>
+            <funderName>Bundesministerium für Gesundheit</funderName>
+            <funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/501100003107</funderIdentifier>
+        </fundingReference>
+    </fundingReferences>
+</resource>
